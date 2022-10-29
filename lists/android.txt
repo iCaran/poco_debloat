@@ -1,0 +1,17 @@
+# disabling these are prolly unnecessary, but im doing anyways - minimalism
+
+com.android.cts.priv.ctsshim # "Compatibility Test Service. Verifies certain upgrade scenarios. Disabling could mess with OTA updates.\n"
+			     # if you're using miui and have it rooted, you're not going to want any system updates, that will break the rom
+			     # if you're not going to update your device at all like me, these seems safe to remove
+com.android.internal.display.cutout.emulation.corner # "Display cutout variant\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts"
+						     # i dont like the notch, i use the "hide notch" option anyways
+						     # disabled this and so far it seems harmless
+
+
+# unknown, but likely fine to disable; i did anyways
+
+com.android.internal.display.cutout.emulation.double # https://www.apkmirror.com/apk/google-inc/double-display-cutout/double-display-cutout-1-0-release/double-display-cutout-1-0-android-apk-download/#description
+						     # maybe its for double notch?
+com.android.theme.icon.pebble # "Android icons pack [Pebble].\nSafe to remove if you don't use them, but there's no point in doing so as they are simple data containers with no permissions."
+				# i use lawnchair and lawnicons, but as 0x192 says, there's prolly no point in removing this
+				# i, just doing it because... idk tbh

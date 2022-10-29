@@ -1,0 +1,71 @@
+You must not try to uninstall the following Xiaomi system apps as doing so will result in a soft brick requiring a hard reset.
+com.miui.securitycenter
+com.miui.securityadd
+com.xiaomi.finddevice
+
+https://technastic.com/xiaomi-bloatware-list-miui/
+
+
+---------
+
+
+The following apps cannot be disabled or deleted (will cause failure to start) [WILL BOOTLOOP, DO NOT REMOVE]
+
+    com.lbe.security.miui Rights Management Service*
+    com.android.updater system update*
+    com.miui.securitycenter Mobile Manager*
+    com.xiaomi.finddevice Find Phone*
+    com.miui.home System Desktop*
+    com.miui.guardprovider MIUI Security Component*
+    com.xiaomi.market App Store*
+    com.xiaomi.account Xiaomi account*
+    com.miui.packageinstaller Application package management component*
+
+The following apps must be signed by Xiaomi [DO NOT REMOVE]
+
+    com.android.updater system update
+    com.miui.securitycenter Mobile Manager
+    com.xiaomi.finddevice Find a phone
+    com.xiaomi.market App Store
+
+The following apps are not recommended to disable or delete [CAN DISABLE, NOT RECOMMANDED]
+
+    com.miui.powerkeeper battery and performance
+    com.xiaomi.metoknlp Network Location Services
+    com.miui.tsmclient Xiaomi Smart Card
+    com.miui.accessibility Accessibility Services (TTS)
+    com.miui.backup Backup and restore
+    com.miui.freeform Freeform
+    com.miui.face face recognition
+
+[DISABLE NOT WORKING] will be automatically enabled when the following apps are disabled
+
+    com.miui.contentcatcher
+    com.android.printspooler
+    com.miui.audiomonitor
+    com.miui.voicetrigger
+    com.xiaomi.mircs
+    com.miui.daemon
+    com.xiaomi.xmsfkeeper
+
+also com.miui.packageinstaller
+
+https://gist-github-com.translate.goog/mcxiaoke/ade05718f590bcd574b807c4706a00b1?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp#file-miui-L92
+
+
+
+--------------
+
+anything star marked or circle marked here
+
+https://gist-github-com.translate.goog/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp
+
+
+--------------
+
+
+com.google.android.ext.services # apparantly causes bootloop
+				# https://github.com/0x192/universal-android-debloater/blob/main/resources/assets/uad_lists.json
+
+
+com.android.updater # "Mi Updater\nProvide system updates\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE!\n"

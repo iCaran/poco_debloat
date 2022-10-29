@@ -1,0 +1,21 @@
+com.miui.powerkeeper # used to let users more options to control app's battery consumption
+miui.systemui.plugin # System UI Plug-in
+com.miui.guardprovider # MIUI security components (MIUI security components)
+com.miui.backup # Backup
+com.miui.notification # Notifications
+com.miui.global.packageinstaller # Application package management component (Packageinstaller)
+com.miui.freeform # Floatingwindows / MIUI PiP service
+com.lbe.security.miui # Permissions / Rights Management Service (Permissions)
+com.miui.core # MIUISDK
+com.miui.face # MiuiBiometric
+com.miui.home # System Desktop / Launcher
+
+com.xiaomi.account # Mi Account (MiAccount)
+com.xiaomi.simactivate.service # "Xiaomi SIM Activation Service\nSIM authentication process to access exclusive features in certain MIUI applications.\nFor the activation to work you need to send a international SMS to China.\nYour carrier may block this by default and/or you'll probably need to pay extra for this.\nAfter SIM activation, you can send text messages (Mi Messages) to other Mi users using internet connection (like i-messages).\nYou will be able to synchronize you messages into Mi Cloud and this also enables the Mi Find Device feature which allows you to track your phone’s location from your online Mi account.\n\nNote: To enable/disable Mi Messages go to Settings -> System Apps -> Messaging and reboot",
+com.xiaomi.location.fused # "FusedLocationProvider\nIt uses a combination of GPS, Wi-Fi and internal sensors to improve geolocation performance.\nThere's also a Fused Location Provider embeded in 'com.google.android.gms'\nThis Xiaomi location provider obviously has as much tracking as the Google one but if you can remove one tracking source it's better than nothing.\nCan someone try disabling this package and give feedback?"
+com.xiaomi.xmsf # "Xiaomi Service Framework Keeper\nLogger service for 'com.xiaomi.xmsf'\n"
+com.xiaomi.xmsfkeeper # disabling might be useless, mcxiaoke says it gets re-enabled on its own
+com.xiaomi.misettings # "Xiaomi Settings app\n"
+
+com.android.updater # "Mi Updater\nProvide system updates\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE!\n"
+

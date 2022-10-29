@@ -1,0 +1,16 @@
+https://gist.github.com/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a
+https://technastic.com/xiaomi-bloatware-list-miui/
+https://gist.github.com/Biswa96/81fe477079fa5279f7cfd7b98d5519c7
+https://github.com/BurnerMedia/GuardDB
+https://miuiver.com/wp-content/uploads/miui-pre-installed-software.html
+https://gist.github.com/enkeys/ba8c84da1d507605254b4025cfc219bc
+https://gist.github.com/mcxiaoke/ade05718f590bcd574b807c4706a00b1
+https://github.com/0x192/universal-android-debloater/blob/main/resources/assets/uad_lists.json
+https://lucacesarano.medium.com/xiaomi-super-bloatware-list-2020-db38ace9e9e1
+https://github.com/paritosh9199/xiomi-redimi-debloat/blob/master/package_list.txt
+https://github.com/koff75/secure-miui-12-bloatwares/blob/master/miui11.sh
+https://gist.github.com/bitrate16/2da01daadd59014c7b2b18a9263203d2
+https://devcondition.com/article/removing-unneeded-miui-applications/
+https://gitlab.com/W1nst0n/universal-android-debloater/-/tree/master/lists
+https://www.olorin.me/2020/02/11/debloating-the-umidigi-f2/
+https://preappcollector.com/

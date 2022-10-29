@@ -1,0 +1,136 @@
+# removal recommended for these:
+com.android.chrome # chrome browser
+com.android.calllogbackup # "Call Logs Backup/Restore feature.\nRuns in the background.\nhttps://android.googlesource.com/platform/packages/providers/CallLogProvider/+/refs/heads/master/src/com/android/calllogbackup",
+com.android.providers.partnerbookmarks # "Provides bookmarks about partners of Google in Chrome.\n"
+com.android.traceur # "System Tracing\nRecording device activity over a short period of time is known as system tracing. System tracing produces a trace file that can be used to generate a system report.\nNot useful if you're not a developer.\nhttps://developer.android.com/topic/performance/tracing",
+
+
+
+
+# this is only for minimalism's sake really, and i'm not saying this lightly, removing some of these should save your battery too
+#one doesn't need to mess with these imo; it's just a list of things one can disable if one chooses to - it's not for everyone
+
+# bunch of overlays mentioned here 0 https://android.googlesource.com/platform/frameworks/base/+/master/data/etc/preinstalled-packages-platform-overlays.xml
+# i can't say which is needed and which isn't
+
+com.android.camera # default camera app, can replace with fdroid alternative
+com.android.deskclock # default clock app, same as above
+com.android.fmradio # the radio app, you might want to keep if you use radio i suppose
+		    # https://www.apkmirror.com/apk/mie-alcatel-support/fm-radio-7/fm-radio-7-v5-1-5-3-0132-0-release/fm-radio-v5-1-5-3-0132-0-android-apk-download/
+com.android.cts.priv.ctsshim # "Compatibility Test Service. Verifies certain upgrade scenarios. Disabling could mess with OTA updates.\nA shim is basically a compatibility layer for an API, that makes sure anything that uses the API does so correctly.\nhttps://android.googlesource.com/platform/frameworks/base/+/51e458e/packages/CtsShim\nhttps://en.wikipedia.org/wiki/Shim_(computing)"
+			     # if you're rooting a stock oem room, you want to avoid updates 
+
+
+# lol i found something interesting about these cutouts
+# https://www.reddit.com/r/Xiaomi/comments/iskxed/warning_do_not_change_display_cutout_in_developer/
+
+com.android.internal.display.cutout.emulation.corner # "Display cutout variant\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts"
+						     # idk if this messes with the normal display mode or not, but i just use the "hide notch" thing
+com.android.internal.display.cutout.emulation.double # this is for a double notch i suppose, as if one isn't ugly enugh already
+com.android.internal.display.cutout.emulation.hole # cutout for punch hole display i suppose, please stop
+com.android.internal.display.cutout.emulation.tall # at this point i don't really care what cutout variant this is
+com.android.internal.display.cutout.emulation.waterfall # ^
+
+
+	
+com.android.providers.calendar # "Calendar Storage\nNecessary for the stock Calendar app to work correctly.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html"
+				# i disabled and things seem fine, get any other offline calendar app
+com.android.internal.systemui.navbar.gestural_wide_back # "Enables a setting increasing how far you need to move your finger to trigger the back gesture."
+							# its a setting for the iphone copy-cat phone genstures, don't use, this is a minimalism list
+com.android.internal.systemui.navbar.gestural_extra_wide_back # same as above
+com.android.internal.systemui.navbar.gestural # same
+com.android.internal.systemui.navbar.gestural_narrow_back # "Enables a setting decreasing how far you need to move your finger to trigger the back gesture."
+
+com.android.wallpapercropper # "Wallpaper cropper.\n",
+			     # https://www.apkmirror.com/apk/samsung-electronics-co-ltd/com-android-wallpapercropper/
+			     # https://www.reddit.com/r/LineageOS/comments/mz0pex/pioneer_cannot_set_wallpaper/
+			     # i don't even have a wallpaper, my screen is black
+com.android.theme.color.cinnamon # some android theme stuff, nobody needs this imo, it doesn't contribute to a phone's functionality
+				 # https://forum.xda-developers.com/t/theme-no-root-android-10-enable-pixel-themes-and-more-with-adb.4118377/page-3
+
+com.android.companiondevicemanager # "Companion Device Manager\nThis handles connections to other devices, like Bluetooth Headphones, desktop Operating Systems, etc.\nOnly needed for Google smart IoT devices (WearOS/Android Wear)",
+				   # if you dont use any fancy device for no reason, this is not needed
+com.android.mms.service # "Provides support for sending MMS.\n"
+			# you could use any chat app instead of mms
+com.android.soundrecorder # "AOSP Sound recorder. OEM often use their own solution\nNOTE: On some phones, Huawei & Xiaomi also use this package name for their own browser app.\nThere are better apps (on F-droid) anyway \n"
+com.android.providers.downloads.ui # "Downloads\nUser interface for downloads."
+				   # 0x192 says it's unsafe but i disabled this and nothing seems to be amiss so far
+com.android.vending # Google Play Store
+com.android.simappdialog # "Sim App Dialog\nCreates a pop-up asking if the user wants to install the carrier app when a SIM is inserted. Seems to be event-triggered, i.e: doesn't run in the background.\nhttps://android.googlesource.com/platform/frameworks/base/+/master/packages/SimAppDialog/src/com/android/simappdialog/InstallCarrierAppActivity.java"
+			 # maybe it's different for carrier locked smartphone countries, but not really useful here
+com.android.systemui.notch.overlay # i don't really understand what "notch overlay" or "immersive mode" is, but i don't think it's needed
+com.android.egg # android easter egg
+com.android.calendar # "AOSP Calendar app\nNOTE: Some OEMs (like Huawei & Xiaomi) use the same package name for their app."
+		     # use any other calendar app
+com.android.printspooler # "Print Spooler\nManages the printing process.\nRuns on boot, but not beyond that.\nWARNING: Disabling breaks the connection preferences submenu in the settings app on most devices, but other than that it only breaks printing functionality and is safe to disable.",
+com.android.dreams.basic # Daydream / ScreenSaver
+com.android.inputdevices # "Only contains a receiver named \"Android keyboard\", possibly for an external keyboard.\nLocates available keyboard layouts. Apps can offer additional keyboard layouts to the user by declaring a suitable broadcast receiver in their manifest."
+			 # can remove if you don't use an external keyboard i suppose, normal keyboard works fine with this disabled
+com.android.bips # "Default Print Service.\nGeneric printing service that should work with most printers.\nWill break printing functionality if disabled, but other replacement print services can be downloaded from the Play Store.",
+		 # Don't remove if you want printing functionality on a phone i suppose, but i mean what are computers for?
+com.android.cellbroadcastreceiver # "Cell broadcast is designed to deliver messages to multiple users in an area.\nThis is notably used by ISPs to send Emergency/Government alerts.\nRuns at boot time and is also triggered after exiting airplane mode.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast\nhttps://www.androidcentral.com/amber-alerts-and-android-what-you-need-know\nhttps://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver/+/refs/heads/master/src/com/android/cellbroadcastreceiver"
+				  # some might consider it useful, i consider it creepy to have a personal instant alert by the big brother
+com.android.se # "SecureElementApplication\nRuns in the background as part of the system.\nUnderlying implementation for the OMAPI SE service.\nEnables apps to use the OpenMobile API to access secure elements(SE) to enable smart-card payments and other secure services.\n\nAn SE is a special chip (e.g SIM-card) for storing cryptographic secrets in a way that makes illicit use hard.\nThe Open Mobile Alliance (OPA) is a standards organization which develops open standards for the mobile phone industry.",
+	       # fancy new chip on your phone, don't use it, don't use cash or apps with microtransactions
+com.android.carrierdefaultapp # "This package is a generic solution that allows carriers to indicate when a device has run OOB(Out Of Balance). Android devices that are OOB need carrier mitigation protocols to allow select data through(like to notify users their data/balance is out, or allow them to buy more data through the carrier app).\nWill probably break that functionality if disabled, but is otherwise safe to disable(should only affect users that are out of data/balance?).\nhttps://source.android.com/devices/tech/connect/oob-users",
+com.android.soundpicker # https://www.apkmirror.com/apk/google-inc/sounds/sounds-2-0-223598125-release/sounds-2-0-223598125-android-apk-download/#description
+			# Choose your favorite sounds for alarms, ringtones, and notifications
+			# i disabled but i can do all that just fine still
+com.android.wallpaper.livepicker # "Enables you to pick a live wallpaper. Removing it will break some weather applications (especially ones with widgets) and wallpaper applications like Muzei.",
+				 # i use muzei myself, but honestly a wallpaper is a useless thing too
+com.android.storagemanager # "Storage manager (Maintenance/Storage panel in the settings)\nClean up unused files, show size of files regrouped by categories...\n",
+			   # idk, i disabled that and it still works somehow, maybe its not actually disabled even when adb says it disabled it?
+com.android.cts.ctsshim # Compatibility Test Suite, tool for developers to check if the newly developed app is compatible with the older version for Android OS
+			# https://fixyourandroid.com/about/com-android-cts-priv-ctsshim/
+com.android.wallpaperbackup # "Backup your wallapaper and load this backup instead of the original file in case you delete it.\nSafe to remove if you really want to.\n"
+com.android.emergency # "Emergency rescue\nShows emergency info on lockscreen and power menu. Safe to disable if you don't want it.\nLoads on device unlock/lockscreen and power menu, so it's basically always cached in RAM, but shouldn't use much/any battery, so the main thing gained from disabling this package is the ~9MB RAM it uses.",
+com.android.bluetoothmidiservice # "Provides classes for using the MIDI protocol over Bluetooth. Safe to remove if you don't plan to connect MIDI devices."
+com.android.wallpaperpicker # "Enables you to pick a wallpaper.\n"
+
+
+
+
+
+# themes and fonts and stuff you can remove
+# "Android icons pack.\nSafe to remove if you don't use them, but there's no point in doing so as they are simple data containers with no permissions."
+# but they just take up space on your phone doing nothing so... this is more about philosophy
+
+com.android.theme.icon.pebble 
+com.android.theme.icon.vessel
+com.android.theme.icon.taperedrect 
+com.android.theme.icon.squircle
+com.android.theme.icon.roundedrect
+
+com.android.theme.icon_pack.rounded.systemui
+com.android.theme.icon_pack.filled.systemui
+com.android.theme.icon_pack.circular.systemui
+
+com.android.theme.icon_pack.rounded.android
+com.android.theme.icon_pack.filled.android
+
+com.android.theme.icon_pack.circular.themepicker
+com.android.theme.icon_pack.rounded.themepicker
+com.android.theme.icon_pack.filled.themepicker
+
+com.android.theme.icon_pack.filled.settings
+com.android.theme.icon_pack.circular.settings
+com.android.theme.icon_pack.rounded.settings
+
+com.android.theme.icon_pack.rounded.launcher # im not sure what this is, maybe an icon pack specifically for launcher3
+com.android.theme.icon_pack.filled.launcher
+com.android.theme.icon_pack.circular.launcher
+
+com.android.theme.color.black
+com.android.theme.color.green
+com.android.theme.color.ocean
+com.android.theme.color.space
+com.android.theme.color.orchid
+com.android.theme.color.purple
+
+com.android.systemui.icon.overlay
+com.android.theme.icon.teardrop
+
+com.android.theme.font.notoserifsource
+
+com.android.wifi.resources.overlay # "System Wi-Fi resources Theme pack\nGuessing it's a pack of themes for some Wi-Fi related system UI, based on the name.",
+				   # i tested, wifi works fine without it

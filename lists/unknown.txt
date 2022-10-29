@@ -1,0 +1,39 @@
+com.android.settings.overlay.miui
+android.miui.overlay
+com.android.systemui.overlay.miui
+com.android.server.telecom.overlay.miui # prolly not to remove since com.android.server.telecom.overlay is needed for calls to work properly
+com.android.systemui.miui.optimization.overlay
+com.google.android.overlay.setupwizard # im guessing its about the first boot setup, by the name
+com.android.networkstack.overlay # NetworkStackOverlay
+com.android.systemui.gesture.line.overlay
+com.android.server.telecom.overlay.miui # potentially interesting - https://hybrid-analysis.com/sample/5b055b333c98e4b6a02781f060256a8c2e8041a926895bc1aa1ec66d7188accc/5f6946ecb672903b5c5717c6
+com.android.systemui.navigation.bar.overlay
+com.android.overlay.gmstelephony
+com.android.wifi.resources.xiaomi
+
+com.longcheertel.sarauth # SarUI by Xiaomi - https://www.apkmirror.com/apk/xiaomi-inc/sarui/sarui-1-0-0-release/sarui-1-0-0-android-apk-download/
+			 # only mention here - https://preappcollector.com/device_details/xiaomi_ginkgo_ginkgo_10_QKQ1.200114.002_V12.0.3.0.QCOMIXM_user_release-keys
+			 Manifest Attributes
+					sharedUserId: android.uid.system
+					allowBackup: True
+
+com.longcheertel.secretcode # maybe its about the the secret device codes? A secret code is defined by this pattern: *#*#code#*#*
+com.longcheertel.cit # Xiaomi again - https://www.apkmirror.com/apk/xiaomi-inc/cit-test/cit-test-1-4-4-release/cit-test-1-4-4-android-apk-download/
+		     # it's prolly this - https://xiaomiui.net/hidden-hardware-diagnostic-menu-in-android-6787/
+
+
+
+
+# i'm not completely sure about this, but it seems like it's for passwordless, hardware 2fa keys (yubikey and the kind)
+# i'd say remove it, not needed if you don't use such keys
+com.fido.asm # Xiaomi - https://www.apkmirror.com/apk/xiaomi-inc/fido-uaf1-0-asm/fido-uaf1-0-asm-3-1-6-release/fido-uaf1-0-asm-3-1-6-android-apk-download/
+	     # https://doubleoctopus.com/security-wiki/protocol/fast-identity-online/
+
+
+
+# unknown sort of, but seems obvious enough, don't mess in my opinion
+# unless of course you don't want give your biometrics to your device and some company and stick to typable passwords
+# i haven't tested this so i can't says what else it will break besides basic fingerprinting tech, or that it will break anything at all
+
+com.focaltech.fingerprint # FocalTech is a biometric solutions providing company, they make fingerprint systems for phones and laptops as well
+com.fingerprints.sensortesttool # this one is Xiaomi - https://www.apkmirror.com/apk/xiaomi-inc/sensor-test-tool/sensor-test-tool-3-54-release/sensor-test-tool-3-54-3-android-apk-download/

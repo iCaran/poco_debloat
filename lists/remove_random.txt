@@ -1,0 +1,7 @@
+com.wapi.wapicertmanager - "WAPI Certificates Manager\nWAPI = WLAN Authentication Privacy Infrastructure (https://en.wikipedia.org/wiki/WLAN_Authentication_and_Privacy_Infrastructure\nIt was designed to replace WEP and become the new Standard but it was't rejected by the ISO (International Organization for Standardization)\nIt is currently only used in China\nThis app most likely manage certificates (they are used to make sure you're not connecting to a rogue Access Point)\nNote: If you live in China, you most likely want to keep it.\n",
+
+
+# random apps and games that comes bloated in for no reason
+
+com.netflix.mediaclient # netflix app
+com.sukhavati.gotoplaying.bubble.BubbleShooter.mint # some game - bubble shooter
