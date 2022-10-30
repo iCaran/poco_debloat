@@ -4,6 +4,7 @@
 com.google.android.apps.subscriptions.red # "Google One (https://play.google.com/store/apps/details?id=com.google.android.apps.subscriptions.red)\nLets you manage your Google cloud storage.\nOccasionally runs in the background."
 com.google.android.googlequicksearchbox # google search box
 com.google.android.apps.googleassistant # google assistant, a danger to you and everyone around you, a constant listener in the shadows
+com.android.hotwordenrollment.okgoogle # Google Assistant trigger hotword detection service, a constantly listening mic
 com.google.android.apps.messaging # you will need an sms app after removing this
 				  # i recommend Simple SMS Messenger by Tibor Kaputa 
 com.google.ar.lens # google's spying eye, google lens
