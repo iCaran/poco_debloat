@@ -1,4 +1,9 @@
 @echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
 
 set base=adb shell pm disable-user --user 0
 
@@ -22,7 +27,7 @@ echo.
 echo You can, and are advised to thoroughly research each pacakge installed on your device, a list of which you can generate by using the command - "adb shell pm list packages". Select the non-essential ones and put it in a list, and supply it below.
 echo.
 echo MODIFICATIONS - I advise against it, unless you're completely sure of what you're doing... but you can uninstall packages instead of simply disabling, to do that, edit this script file thusly -
-echo On the third line, where it says "set base=adb shell pm disable-user --user 0", replace it with the following: 
+echo On the eighth line, where it says "set base=adb shell pm disable-user --user 0", replace it with the following: 
 echo set base=adb shell pm uninstall
 echo.
 echo Connect your Android device to your computer with a USB cable, and make sure you have USB Debugging enabled on your phone.
@@ -33,14 +38,48 @@ set /p file=
 
 echo.
 echo.
-echo "||BEGINNING OPERATION||"
+
+adb devices -l | find "device product:" >nul
+if errorlevel 1 (
+    echo No connected devices
+    goto :eof
+)
+
+echo ---BEGINNING OPERATION---
+
+echo.
+echo.
+
+set failed[0]=Pacages Not Found - 
+set /a index=1
+
+set passed[0]=Packages Disabled - 
+set /a idx=1
 
 for /f %%g in (%file%) do (
-	%base% %%g
+	%base% %%g >nul 2>nul && (
+		set passed[!idx!]=%%g
+		set /A idx+=1
+	) || (
+		set failed[!index!]=%%g
+		set /A index+=1
+	)
+) 
+
+for /L %%a in (0,1,%idx%) do (
+	echo !passed[%%a]!
 )
 
 echo.
 echo.
-echo "||OPERATION FINISHED||"
+
+for /L %%a in (0,1,%index%) do (
+	echo !failed[%%a]!
+)
+
+echo.
+echo.
+echo ---OPERATION FINISHED---
 
 color 07
+endlocal
