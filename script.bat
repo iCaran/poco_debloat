@@ -42,6 +42,7 @@ echo.
 adb devices -l | find "device product:" >nul
 if errorlevel 1 (
     echo No connected devices
+    color 07
     goto :eof
 )
 
@@ -66,14 +67,18 @@ for /f %%g in (%file%) do (
 	)
 ) 
 
-for /L %%a in (0,1,%idx%) do (
+set /a pin=%idx%-1
+
+for /L %%a in (0,1,%pin%) do (
 	echo !passed[%%a]!
 )
 
 echo.
 echo.
 
-for /L %%a in (0,1,%index%) do (
+set /a fin=%index%-1
+
+for /L %%a in (0,1,%fin%) do (
 	echo !failed[%%a]!
 )
 
