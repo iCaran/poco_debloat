@@ -31,7 +31,7 @@ echo On the eighth line, where it says "set base=adb shell pm disable-user --use
 echo set base=adb shell pm uninstall
 echo.
 echo Connect your Android device to your computer with a USB cable, and make sure you have USB Debugging enabled on your phone.
-echo Enter the name of your list file (it should be a text file in the format described above, and present in the same directory). If you're using the default list provided, then type "list.txt" without the quotes and click enter: 
+echo Enter the name of your list file (it should be a text file in the format described above, and present in the same directory). If you're using one of the default list provided, then type "mi.txt" or "android.txt" without the quotes and click enter: 
 echo.
 
 set /p file= 
