@@ -7,6 +7,12 @@ setlocal
 
 set base=adb shell pm disable-user --user 0
 
+adb --version >nul 2>nul
+if errorlevel 1 (
+    echo ADB Tools not found
+    goto :eof
+)
+
 cls
 color 03
 :: 0a 03 0e 0b 0e 08
