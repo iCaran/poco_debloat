@@ -47,7 +47,7 @@ echo.
 
 adb devices -l | find "device product:" >nul
 if errorlevel 1 (
-    echo No connected devices
+    echo Device not connected or USB debugging is not Enabled.
     color 07
     goto :eof
 )
