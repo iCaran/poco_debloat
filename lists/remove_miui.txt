@@ -9,8 +9,8 @@ android.autoinstalls.config.Xiaomi.model # https://www.apkmirror.com/apk/xiaomi-
 # these ones i recommend not just disabling but straight up uninstalling, also do it on first boot
 com.facebook.services # "Facebook Services is a tool that lets you manage different Facebook services automatically using your Android device. \nIn particular, the tool focuses on searching for nearby shops and establishments based on your interests.\nI don't know if this a dependency for com.facebook.katana but nobody cares because we all want to delete all the Facebook stuff right ?!!\n"
 com.facebook.katana # Facebook app
-com.facebook.system "Facebook App Installer (empty shell app which incite you to install the Facebook app)\n",
-com.facebook.appmanager "Facebook app manager handles Facebook apps updates.\n"
+com.facebook.system # "Facebook App Installer (empty shell app which incite you to install the Facebook app)\n",
+com.facebook.appmanager # "Facebook app manager handles Facebook apps updates.\n"
 
 com.android.camera # Xiaomi camera - https://www.apkmirror.com/apk/xiaomi-inc/camera-xiaomi/camera-xiaomi-4-3-004660-0-release/xiaomi-camera-4-3-004660-0-android-apk-download/
 		   # use any camera app from fdroid, i recommend Open Camera
@@ -86,7 +86,7 @@ com.milink.service #  "UniPlay Service\nMIUI screen casting service. \nIf remove
 
 
 
-UNKOWN - but might not be risky
+# UNKOWN - but might not be risky
 
 com.miui.systemui.devices.overlay # https://github.com/BurnerMedia/GuardDB/blob/master/com.miui.systemui.devices.overlay
 				  # https://gist.github.com/Biswa96/81fe477079fa5279f7cfd7b98d5519c7
@@ -112,7 +112,7 @@ com.android.networkstack.inprocess.overlay # https://www.apkmirror.com/apk/xiaom
 
 
 
-CAUTION - might lose functionality - i removed all these and things seem to be alright
+# CAUTION - might lose functionality - i removed all these and things seem to be alright
 
 com.miui.cleaner # https://github.com/0x192/universal-android-debloater/issues/238
 com.xiaomi.powerchecker # https://lucacesarano.medium.com/xiaomi-super-bloatware-list-2020-db38ace9e9e1
