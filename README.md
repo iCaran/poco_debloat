@@ -26,7 +26,7 @@ The script will give a detailed output of the packages disabled and not disabled
 The 'advanced method' would be to make your own list. Each phone will have a different set of packages, and OEM ROMs are never consistent over time and hardware. The only way to be sure about the things on your device is to list them all and try to dig up some info on them. It's a manual process that will take time, and effort as well as trial and error. But it's really the only way to be 100% certain.
 
 ## Related Post
-Slightly Altered script, more simplified - https://bb.chip.icu/d/56-a-deboater-tool
+Slightly altered script, more simplified - https://bb.chip.icu/d/56-a-deboater-tool
 
 And of course, try to avoid using OEM ROMs if you can.
 --
