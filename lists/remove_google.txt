@@ -1,82 +1,177 @@
 # disabling google doesn't seem to make the cut for me, im uninstalling these
 # from what i've heard, disabling google stuff is useless, they still work
+		   
+		   
+		   
+# "Google One - Lets you manage your Google cloud storage.Occasionally runs in the background."
+com.google.android.apps.subscriptions.red
+		   
+# google search box
+com.google.android.googlequicksearchbox
+		   
+# google assistant, a danger to you and everyone around you, a constant listener in the shadows
+com.google.android.apps.googleassistant
+		   
+# Google Assistant trigger hotword detection service, a constantly listening mic
+com.android.hotwordenrollment.okgoogle
+		   
+# you will need an sms app after removing this
+# i recommend Simple SMS Messenger by Tibor Kaputa
+com.google.android.apps.messaging
+		   
+# google's spying eye, google lens
+com.google.ar.lens
+		   
+# im sure we've all accidentally activated it once, also called google's activity service, who even uses this?
+com.google.android.marvin.talkback
+		   
+# gmail app
+com.google.android.gm
+		   
+# Digital Wellbeing, spyware
+# \nWARNING: It is now a hard dependency for the settings app on Android 12+ on Pixel phones.
+# Disable this package instead of uninstalling it or the settings will crash on launch."
+# for a few years anyways, don't use android 12, same as windows 11
+# I suppose we will all have to "upgrade" to the forced spyware at some point or another, but let's not do it today
+com.google.android.apps.wellbeing
+		   
+# google dialer, should be obvious that it does not belong
+# you'll need a dialer app after removing this, so i recommend simple dailer by Tibor Kaputa
+# i don't know of a non-spy dialer with the built-in video call support which works on miui,
+# of course i didn't go checking playstore though
+com.google.android.dialer
+		   
+# Google Maps app
+com.google.android.apps.maps
+		   
+# google contacts app, use simple contacts pro instead (Tibor Kaputa)
+com.google.android.contacts
+		   
+# google text to speech, also something i think nobody needs
+com.google.android.tts
+		   
+# google pay; no upi app is any private; try to use cash in the world everywhere you can
+com.google.android.apps.nbu.paisa.user
+		   
+# Android Auto
+com.google.android.projection.gearhead
+		   
+# "Device Health Services (discontinued?) Calculates remaining battery percentage based on usage.
+# Reviews for this app were... funny (https://www.reddit.com/r/google/comments/ajnbmh/the_reviews_for_device_health_services_are_quite/)
+# Note: this app needs com.google.android.gms"
+com.google.android.apps.turbo
+		   
+# Google Keyboard, consider it a keylogger, just install any other FOSS keyboard before removing this
+# Simple Keyboard, FlorisBoard, anything
+com.google.android.inputmethod.latin
+		   
+# the youtube app, use newpipe
+# lol for some weird reason, uninstalling this via ADB says "Success", but then simply does absolutely nothing
+com.google.android.youtube
+		   
+# Google Podcasts app, if you like podcasts, i recommend AntennaPod from Fdroid
+com.google.android.apps.podcasts
+		   
+# Google Duo
+com.google.android.apps.tachyon
+		   
+# "Files by Google\nRuns in the background."
+com.google.android.apps.nbu.files
+		   
+# Google Tv
+com.google.android.videos
+		   
+# Google Photos
+com.google.android.apps.photos
+		   
+# Google Home
+com.google.android.apps.chromecast.app
+		   
+# Youtube Music
+com.google.android.apps.youtube.music
+		   
+# Google News
+com.google.android.apps.magazines
 
-com.google.android.apps.subscriptions.red # "Google One (https://play.google.com/store/apps/details?id=com.google.android.apps.subscriptions.red)\nLets you manage your Google cloud storage.\nOccasionally runs in the background."
-com.google.android.googlequicksearchbox # google search box
-com.google.android.apps.googleassistant # google assistant, a danger to you and everyone around you, a constant listener in the shadows
-com.android.hotwordenrollment.okgoogle # Google Assistant trigger hotword detection service, a constantly listening mic
-com.google.android.apps.messaging # you will need an sms app after removing this
-				  # i recommend Simple SMS Messenger by Tibor Kaputa 
-com.google.ar.lens # google's spying eye, google lens
-com.google.android.marvin.talkback # im sure we've all accidentally activated it once, also called google's activity service, who even uses this?
-com.google.android.gm # gmail app
-com.google.android.apps.wellbeing # Digital Wellbeing, spyware
-				  # \nWARNING: It is now a hard dependency for the settings app on Android 12+ on Pixel phones. Disable this package instead of uninstalling it or the settings will crash on launch."
-				  # for a few years anyways, don't use android 12, same as windows 11 - i suppose we will all have to "upgrade" to the forced spyware at some point or another, but let's not do it today
-com.google.android.dialer # google dialer, should be obvious that it does not belong
-			  # you'll need a dialer app after removing this, so i recommend simple dailer by Tibor Kaputa
-			  # i don't know of a non-spy dialer with the built-in video call support which works on miui, of course i didn't go checking playstore though
-com.google.android.apps.maps # Google Maps app
-com.google.android.contacts # google contacts app, use simple contacts pro instead (Tibor Kaputa)
-com.google.android.tts # google text to speech, also something i think nobody needs
-com.google.android.apps.nbu.paisa.user # google pay; no upi app is any private; try to use cash in the world everywhere you can	
-com.google.android.projection.gearhead # Android Auto
-com.google.android.apps.turbo # "Device Health Services (discontinued?)\nCalculates remaining battery percentage based on usage.\nReviews for this app were... funny (https://www.reddit.com/r/google/comments/ajnbmh/the_reviews_for_device_health_services_are_quite/)\nNote: this app needs com.google.android.gms",
-com.google.android.inputmethod.latin # Google Keyboard, consider it a keylogger, just install any other FOSS keyboard before removing this, Simple Keyboard, FlorisBoard, anything
-com.google.android.youtube # the youtube app, use newpipe
-			   # lol for some weird reason, uninstalling this via ADB says "Success", but then simply does absolutely nothing
-com.google.android.apps.podcasts # Google Podcasts app, if you like podcasts, i recommend AntennaPod from Fdroid
-com.google.android.apps.tachyon # Google Duo
-com.google.android.apps.nbu.files # "Files by Google\nRuns in the background."	
-com.google.android.videos # Google Tv	
-com.google.android.apps.photos # Google Photos
-com.google.android.apps.chromecast.app # Google Home
-com.google.android.apps.youtube.music # Youtube Music
-com.google.android.apps.magazines # Google News
-com.google.android.apps.docs # Google Drive
-
-com.google.android.nearby.halfsheet # Nearby Share - https://developers.google.com/nearby/
-
-
-
+# Google Drive
+com.google.android.apps.docs
+		   
+# Nearby Share - https://developers.google.com/nearby/
+com.google.android.nearby.halfsheet
+		   
+		   
+		   
 # for some reason i was unable to uninstall these via adb, had to simply disable
-				# i guess one can remove it with root, uninstall via App Manager, but i haven't tried; i think it will break something or other so i don't recommend either
-
-com.google.android.partnersetup # "Google Partner Setup\nOccasionally runs in the background.\nBased on an unclear explanation online: Enables applications to interact with your Google account/apps, for example: adding a Google Calendar event from a To-Do app.\nProbably safe to disable; Haven't noticed any consequences of disabling from weeks of use.",			
-com.google.android.feedback # "This is the package that sends crash-report feedback to the Play Store? The crash pop-up still happens with this disabled.\nDoesn't seem to run on its own.\nHas permission to access system logs and package usage stats. Only connects to 4 Google domains. App developers likely have to go through the Play Store to access any sent data.\nhttps://beta.pithus.org/report/7041823ff880c207ed2ddacdc92e5ed803b1eb105e4483696d2152bea44903aa"
-com.google.android.printservice.recommendation # PrintServiceRecommendationService / Mobile Printing
-					       # "I think this has to do with recommending a printservice app you can get from the Play store.\nI think printing still works with this off."
-com.google.android.gms.location.history # Google Location History, literally a spy tailing you all your life
-com.google.android.apps.restore # "The backup restore wizard used for pulling Android system backups from your Google account.\nRuns on boot.\nYou only need this if you factory restore, in which case it’s automatically re-enabled for you.",
-
-
-
-
+# i guess one can remove it with root, uninstall via App Manager, but i haven't tried;
+# i think it will break something or other so i don't recommend either
+		   
+# "Google Partner Setup; Occasionally runs in the background.
+# Based on an unclear explanation online: Enables applications to interact with your Google account/apps,
+# for example: adding a Google Calendar event from a To-Do app.
+# robably safe to disable; Haven't noticed any consequences of disabling from weeks of use.",
+com.google.android.partnersetup
+		   
+# "This is the package that sends crash-report feedback to the Play Store? The crash pop-up still happens with this disabled.
+# Doesn't seem to run on its own. Has permission to access system logs and package usage stats. Only connects to 4 Google domains.
+# App developers likely have to go through the Play Store to access any sent data.
+# https://beta.pithus.org/report/7041823ff880c207ed2ddacdc92e5ed803b1eb105e4483696d2152bea44903aa"
+com.google.android.feedback
+		   
+# PrintServiceRecommendationService / Mobile Printing
+# "I think this has to do with recommending a printservice app you can get from the Play store.
+# I think printing still works with this off."
+com.google.android.printservice.recommendation
+		   
+# Google Location History, literally a spy tailing you all your life
+com.google.android.gms.location.history
+		   
+# "The backup restore wizard used for pulling Android system backups from your Google account.Runs on boot.
+# You only need this if you factory restore, in which case it’s automatically re-enabled for you.",
+com.google.android.apps.restore
+		   
+		   
+		   
 # well even then, these i'll still just disable... (this is mostly for minimalism i suppose)
-
-com.google.android.cellbroadcastservice # Cell broadcast is designed to deliver messages to multiple users in an area.\nThis is notably used by ISP to send Emergency/Government alerts.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast\nhttps://www.androidcentral.com/amber-alerts-and-android-what-you-need-know"
-					# govt alerts, anybody needs this
-com.google.android.cellbroadcastreceiver # "Wireless emergency alerts\nCell broadcast is designed to deliver messages to multiple users in an area.\nThis is notably used by ISP to send Emergency/Government alerts.\nRuns at boot and is also triggered after exiting airplane mode.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast\nhttps://www.androidcentral.com/amber-alerts-and-android-what-you-need-know\nhttps://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver/+/refs/heads/master/src/com/android/cellbroadcastreceiver",
-					# same as above
-com.google.android.onetimeinitializer # "Provides first time setup, safe to remove.\n"
-com.google.android.ext.shared # https://android.stackexchange.com/a/169291
-			      # seems like a minor useless feature to me
-com.google.android.overlay.modules.ext.services # something related to the above i suppose
-						# "Android System Theme pack\n"
-com.google.android.syncadapters.contacts # "Synchronisation for Google Contacts.\n"
-com.google.android.syncadapters.calendar # "Synchronisation for Google Calendar.\n"
-
-
-
-
-
-
+		   
+		   
+# Cell broadcast is designed to deliver messages to multiple users in an area.
+# This is notably used by ISP to send Emergency/Government alerts.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast
+# https://www.androidcentral.com/amber-alerts-and-android-what-you-need-know"
+# govt alerts, anybody needs this
+com.google.android.cellbroadcastservice
+		   
+# "Wireless emergency alerts - Cell broadcast is designed to deliver messages to multiple users in an area.
+# This is notably used by ISP to send Emergency/Government alerts.
+# Runs at boot and is also triggered after exiting airplane mode. https://en.wikipedia.org/wiki/Cell_Broadcast
+# https://www.androidcentral.com/amber-alerts-and-android-what-you-need-know
+# https://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver/+/refs/heads/master/src/com/android/cellbroadcastreceiver"
+# same as above
+com.google.android.cellbroadcastreceiver
+		   
+# "Provides first time setup, safe to remove.\n"
+com.google.android.onetimeinitializer
+		   
+# https://android.stackexchange.com/a/169291
+# seems like a minor useless feature to me
+com.google.android.ext.shared
+		   
+# something related to the above i suppose
+# "Android System Theme pack\n"
+com.google.android.overlay.modules.ext.services
+		   
+# "Synchronisation for Google Contacts.\n"
+com.google.android.syncadapters.contacts
+		   
+# "Synchronisation for Google Calendar.\n"
+com.google.android.syncadapters.calendar
+		   
+		   
+		   
 # honestly no idea what these are but phone works fine after disabling them
-
+		   
 # "Android System Theme pack\nGuessing it's a pack of overlay themes for Android System or Google Play Services based on the name."
 com.google.android.overlay.gmsconfig.common 
 com.google.android.overlay.gmsconfig.comms 
 com.google.android.overlay.gmsconfig.gsa 
 com.google.android.overlay.modules.permissioncontroller.forframework
 com.google.android.overlay.modules.modulemetadata.forframework
-	
