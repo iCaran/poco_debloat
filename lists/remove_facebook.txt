@@ -1,6 +1,16 @@
 # these ones i recommend not just disabling but straight up uninstalling, also do it on first boot
-
-com.facebook.services # "Facebook Services is a tool that lets you manage different Facebook services automatically using your Android device. \nIn particular, the tool focuses on searching for nearby shops and establishments based on your interests.\nI don't know if this a dependency for com.facebook.katana but nobody cares because we all want to delete all the Facebook stuff right ?!!\n"
-com.facebook.katana # Facebook app
-com.facebook.system "Facebook App Installer (empty shell app which incite you to install the Facebook app)\n",
+		   
+		   
+		   
+# "Facebook Services is a tool that lets you manage different Facebook services automatically using your Android device. 
+# In particular, the tool focuses on searching for nearby shops and establishments based on your interests.
+# I don't know if this a dependency for com.facebook.katana but nobody cares because we all want to delete all the Facebook stuff right ?!!\n"
+com.facebook.services
+		   
+# Facebook app
+com.facebook.katana
+		   
+"Facebook App Installer (empty shell app which incite you to install the Facebook app)\n",
+com.facebook.system
+		   
 com.facebook.appmanager "Facebook app manager handles Facebook apps updates.\n"
