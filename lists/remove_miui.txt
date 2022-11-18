@@ -1,120 +1,292 @@
 # many of the descriptions are borrowed from the universal-android-debloater repo, among other place; see sources.txt
-
-# IMPORTANT - remove this one at first boot of the rom, before signing into any accounts
-# it doesn't need to match exactly, it depends upon the device and should be labelled as such
-# android.autoinstalls.config.Xiaomi.{x} , where x can be the device factory name or anything # https://www.reddit.com/r/Xiaomi/comments/764hir/what_is_this_pai_app_in_a1_that_cannot_be/docdjbe/
-android.autoinstalls.config.Xiaomi.model # https://www.apkmirror.com/apk/xiaomi-inc/playautoinstalls/playautoinstalls-1001-release/playautoinstalls-1001-android-apk-download/
-	
-
+		   
+# IMPORTANT - remove this one at first boot of the rom, before signing into any accounts.
+# It doesn't need to match exactly, it depends upon the device and should be labelled as such - 
+# "android.autoinstalls.config.Xiaomi.{x}" , where x can be the device factory name or anything 
+# https://www.reddit.com/r/Xiaomi/comments/764hir/what_is_this_pai_app_in_a1_that_cannot_be/docdjbe/
+		   
+# https://www.apkmirror.com/apk/xiaomi-inc/playautoinstalls/playautoinstalls-1001-release/playautoinstalls-1001-android-apk-download/
+android.autoinstalls.config.Xiaomi.model
+		   
+		   
+		   
 # these ones i recommend not just disabling but straight up uninstalling, also do it on first boot
-com.facebook.services # "Facebook Services is a tool that lets you manage different Facebook services automatically using your Android device. \nIn particular, the tool focuses on searching for nearby shops and establishments based on your interests.\nI don't know if this a dependency for com.facebook.katana but nobody cares because we all want to delete all the Facebook stuff right ?!!\n"
-com.facebook.katana # Facebook app
-com.facebook.system # "Facebook App Installer (empty shell app which incite you to install the Facebook app)\n",
-com.facebook.appmanager # "Facebook app manager handles Facebook apps updates.\n"
-
-com.android.camera # Xiaomi camera - https://www.apkmirror.com/apk/xiaomi-inc/camera-xiaomi/camera-xiaomi-4-3-004660-0-release/xiaomi-camera-4-3-004660-0-android-apk-download/
-		   # use any camera app from fdroid, i recommend Open Camera
-com.android.deskclock # Xiaomi clock - https://www.apkmirror.com/apk/xiaomi-inc/miui-clock/miui-clock-12-4-1-3-release/miui-clock-12-4-1-3-android-apk-download/
-		   # use any camera app from fdroid, i recommend Simple Clock (Tibor Kaputa)
-com.android.thememanager # "MIUI Themes (manager)\nXiaomi seems to love confusing package names.\nLets you select and apply themes provided by Xiaomi.\nNOTE: Disabling will break the ability to change lock-screen wallpaper.",
-com.android.thememanager.module # "miui.external.Application The Themes application component. If I do not confuse anything, then I am responsible for importing those through the conductor. Those. Roughly speaking, without this, you can’t apply a third-party theme for MIUI."
-				# https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/90
-
-com.gallery.player # Video Player, i think - https://www.apkmirror.com/apk/xiaomi-inc/galleryplayerservice/galleryplayerservice-2020081200galleryplayerservice-rom-release/galleryplayerservice-2020081200galleryplayerservice-rom-android-apk-download/
-
-
-com.miui.screenrecorder # screen recorder
-com.miui.fm # radio app
-com.miui.qr # qr scanner
-com.miui.extraphoto # Camera Bokeh effect
-com.miui.gallery # miui gallery app
-com.miui.msa.global # miui ads
-com.miui.micloudsync # MiCloudSync
-com.miui.daemon # MIUI Quality Service
-com.miui.hybrid # Quick Application Service Framework (data mining app)
-com.miui.securitycore # SecurityCoreComponent
-com.miui.phrase # Frequentphrases
-com.miui.player # Music Player
-com.miui.miservice # Services & feedback
-com.miui.system # MIUI System Launcher
-com.miui.cit # CIT
-com.miui.android.fashiongallery # Wallpaper Carousel
-com.miui.misound # Music app
-com.miui.bugreport # User feedback (Feedback)
-com.miui.cloudbackup # Cloud Backup service
-com.miui.notes # notes app
-com.miui.wmsvc # WMService
-com.miui.cloudservice # Xiaomi Cloud Service (XiaomiCloud)
-com.miui.hybrid.accessory # SmartScenes / Quick Apps (data mining app)
-com.miui.audiomonitor # karaoke
-com.miui.touchassistant # quick ball
-com.miui.calculator # Mi Calculator
-com.miui.miwallpaper # WallPaper app
-com.google.android.cellbroadcastservice.overlay.miui # probably Amber Alerts
-com.miui.analytics # MIUI Analytics (spyware)
-com.miui.weather2 # Weather app
-com.miui.mediaeditor # Xiaomi Photo Album - Editor (GalleryEditor)
-com.miui.yellowpage # Yellow Page app
-com.miui.systemui.carriers.overlay # Carrier name chaging service
-com.miui.screenshot # screenshot app
-com.miui.fmservice # MIUI Radio FM service
-com.miui.audioeffect # AudioEffect
-
-cn.wps.xiaomi.abroad.lite # Mi Doc Viewer
-com.xiaomi.powerchecker # Power consumption detection
-com.xiaomi.mi_connect_service # Xiaomi Internet Communication Service (MiConnect)
-com.xiaomi.micloud.sdk # "Mi Cloud sdk \nsdk = Software development kit\nSeems to be a dependency for \"com.miui.gallery\"
-com.xiaomi.payment # Mi Credit is a personal loan platform from Xiaomi
-com.fido.xiaomi.uafclient # "UAF client for FIDO.\nFido is a set of open technical specifications for mechanisms of authenticating users to online services that do not depend on passwords.\nhttps://fidoalliance.org/specs/u2f-specs-1.0-bt-nfc-id-amendment/fido-glossary.html\nhttps://fidoalliance.org/specs/fido-v2.0-rd-20170927/fido-overview-v2.0-rd-20170927.html\nThe UAF protocol is designed to enable online services to offer passwordless and multi-factor security by allowing users to register their device to the online service and using a local authentication mechanism such as iris or fingerprint recognition.\nhttps://developers.google.com/identity/fido/android/native-apps\nSafe to remove if you don't use password-less authentification to access online services."
-com.xiaomi.upnp # "UpnpService\nUPnP = Universal Plug and Play\nIt’s a protocol that lets UPnP-enabled devices on your network automatically discover and communicate with each other\nFor exemple it works with the Xiaomi Network Speaker (and probably a lot more Xiaomi IoT stuff)\nUPnP have a lot of security issue and you proably should disable it on your router.\nhttps://nakedsecurity.sophos.com/2020/06/10/billions-of-devices-affected-by-upnp-vulnerability/\nThis package is the Xiaomi implementation on Android (no AOSP support)\n"
-com.xiaomi.mipicks # now Mi App Store, Get Apps
-		   # gives me an error tho, idk what to do
-		   # java.lang.SecurityException: Shell cannot change component state for com.xiaomi.mipicks/null to 3
-com.xiaomi.midrop # Share Me (Mi Drop) 
-com.xiaomi.bluetooth # MIUI BlueTooth
-		     # Nothing to worry, I disabled and tried myself, BT works just fine
-com.xiaomi.bluetooth.overlay # same with this, BT overlay can be removed safely, I tried
-		     	     # lol maybe i should say "works on my machine"
-com.xiaomi.scanner # Mi Scanner app
-com.xiaomi.calendar # Mi Calendar app
-com.xiaomi.discover # "System Apps Updater\nWARNING: Disable System app updates (but not firmware updates)\n",
-
-com.mi.android.globalminusscreen # App Vault \n Google Feed replica from Xiaomi \n Completely useless app which displays all the trending stories from the web + a bunch of other stupid things.\n"
-com.mi.android.globalFileexplorer # Mi File Expolrer/Manager
-
-com.milink.service #  "UniPlay Service\nMIUI screen casting service. \nIf removed, you'll have to use Android's native casting services which can be accessed through a 3rd party app.\n"
-
-
-
+		   
+# "Facebook Services is a tool that lets you manage different Facebook services automatically using your Android device. 
+# In particular, the tool focuses on searching for nearby shops and establishments based on your interests.
+# I don't know if this a dependency for com.facebook.katana but nobody cares 
+# because we all want to delete all the Facebook stuff right ?!!\n"
+com.facebook.services
+		   
+# Facebook app
+com.facebook.katana
+		   
+# "Facebook App Installer (empty shell app which incite you to install the Facebook app)\n",
+com.facebook.system
+		   
+# "Facebook app manager handles Facebook apps updates.\n"
+com.facebook.appmanager
+		   
+		   
+		   
+# Xiaomi camera - https://www.apkmirror.com/apk/xiaomi-inc/camera-xiaomi/camera-xiaomi-4-3-004660-0-release/xiaomi-camera-4-3-004660-0-android-apk-download/
+# use any camera app from fdroid, i recommend Open Camera
+com.android.camera 
+		   
+# Xiaomi clock - https://www.apkmirror.com/apk/xiaomi-inc/miui-clock/miui-clock-12-4-1-3-release/miui-clock-12-4-1-3-android-apk-download/
+# use any camera app from fdroid, i recommend Simple Clock (Tibor Kaputa)
+com.android.deskclock
+		   
+# "MIUI Themes (manager)\nXiaomi seems to love confusing package names.
+# Lets you select and apply themes provided by Xiaomi.
+# NOTE: Disabling will break the ability to change lock-screen wallpaper.",
+com.android.thememanager
+		   
+# "miui.external.Application The Themes application component.
+# Roughly speaking, without this, you can’t apply a third-party theme for MIUI."
+# https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/90
+com.android.thememanager.module
+		   
+# Video Player, i think - https://www.apkmirror.com/apk/xiaomi-inc/galleryplayerservice/galleryplayerservice-2020081200galleryplayerservice-rom-release/galleryplayerservice-2020081200galleryplayerservice-rom-android-apk-download/
+com.gallery.player
+		   
+		   
+# screen recorder
+com.miui.screenrecorder
+		   
+# radio app
+com.miui.fm
+		   
+# qr scanner
+com.miui.qr
+		   
+# Camera Bokeh effect
+com.miui.extraphoto
+		   
+# miui gallery app
+com.miui.gallery
+		   
+ # miui ads
+com.miui.msa.global
+		   
+# MiCloudSync
+com.miui.micloudsync
+		   
+# MIUI Quality Service
+com.miui.daemon
+		   
+# Quick Application Service Framework (data mining app)
+com.miui.hybrid
+		   
+# SecurityCoreComponent
+com.miui.securitycore
+		   
+# Frequentphrases
+com.miui.phrase
+		   
+# Music Player
+com.miui.player
+		   
+# Services & feedback
+com.miui.miservice
+		   
+# MIUI System Launcher
+com.miui.system
+		   
+# Hidden Hardware Test Menu (CIT)
+com.miui.cit
+		   
+# Wallpaper Carousel
+com.miui.android.fashiongallery
+		   
+# Music app
+com.miui.misound
+		   
+# User feedback (Feedback)
+com.miui.bugreport
+		   
+# Cloud Backup service
+com.miui.cloudbackup
+		   
+# notes app
+com.miui.notes
+		   
+# WMService
+com.miui.wmsvc
+		   
+# Xiaomi Cloud Service (XiaomiCloud)
+com.miui.cloudservice
+		   
+# SmartScenes / Quick Apps (data mining app)
+com.miui.hybrid.accessory
+		   
+# karaoke
+com.miui.audiomonitor
+		   
+# quick ball
+com.miui.touchassistant
+		   
+# Mi Calculator
+com.miui.calculator
+		   
+# WallPaper app
+com.miui.miwallpaper
+		   
+# probably Amber Alerts
+com.google.android.cellbroadcastservice.overlay.miui
+		   
+# MIUI Analytics (spyware)
+com.miui.analytics
+		   
+# Weather app
+com.miui.weather2
+		   
+# Xiaomi Photo Album - Editor (GalleryEditor)
+com.miui.mediaeditor
+		   
+# Yellow Page app
+com.miui.yellowpage
+		   
+# Carrier name chaging service
+com.miui.systemui.carriers.overlay
+		   
+# screenshot app
+com.miui.screenshot
+		   
+# MIUI Radio FM service
+com.miui.fmservice
+		   
+# AudioEffect
+com.miui.audioeffect
+		   
+		   
+# Mi Doc Viewer
+cn.wps.xiaomi.abroad.lite
+		   
+# Power consumption detection
+com.xiaomi.powerchecker
+		   
+# Xiaomi Internet Communication Service (MiConnect)
+com.xiaomi.mi_connect_service
+		   
+# "Mi Cloud sdk (Software development kit)
+# Seems to be a dependency for \"com.miui.gallery\"
+com.xiaomi.micloud.sdk 
+		   
+# Mi Credit is a personal loan platform from Xiaomi
+com.xiaomi.payment
+		   
+# "UAF client for FIDO. Fido is a set of open technical specifications for mechanismsof authenticating users to online services that do not depend on passwords.
+# https://fidoalliance.org/specs/u2f-specs-1.0-bt-nfc-id-amendment/fido-glossary.html
+# https://fidoalliance.org/specs/fido-v2.0-rd-20170927/fido-overview-v2.0-rd-20170927.html
+# The UAF protocol is designed to enable online services to offer passwordless and multi-factor security \
+# by allowing users to register their device to the online service and using a local authentication mechanism such as iris or fingerprint recognition.
+# https://developers.google.com/identity/fido/android/native-apps
+# Safe to remove if you don't use password-less authentification to access online services."
+com.fido.xiaomi.uafclient
+		   
+# "UpnpService (UPnP) = Universal Plug and Play
+# It’s a protocol that lets UPnP-enabled devices on your network automatically discover and communicate with each other
+# For exemple it works with the Xiaomi Network Speaker (and probably a lot more Xiaomi IoT stuff)
+# UPnP have a lot of security issue and you proably should disable it on your router.
+# https://nakedsecurity.sophos.com/2020/06/10/billions-of-devices-affected-by-upnp-vulnerability/
+# This package is the Xiaomi implementation on Android (no AOSP support)"
+com.xiaomi.upnp
+		   
+# now Mi App Store, Get Apps
+# gives me an error tho, idk what to do
+# java.lang.SecurityException: Shell cannot change component state for com.xiaomi.mipicks/null to 3
+com.xiaomi.mipicks
+		   
+# Share Me (Mi Drop)
+com.xiaomi.midrop
+		   
+# MIUI BlueTooth
+# Nothing to worry, I disabled and tried myself, BT works just fine
+com.xiaomi.bluetooth
+		   
+# same with this, BT overlay can be removed safely, I tried
+# lol maybe i should say "works on my machine"
+com.xiaomi.bluetooth.overlay
+		   
+# Mi Scanner app
+com.xiaomi.scanner
+		   
+# Mi Calendar app
+com.xiaomi.calendar
+		   
+# "System Apps Updater
+# WARNING: Disable System app updates (but not firmware updates)"
+com.xiaomi.discover
+		   
+		   
+# App Vault - Google Feed replica from Xiaomi
+# Completely useless app which displays all the trending stories from the web + a bunch of other stupid things."
+com.mi.android.globalminusscreen
+		   
+# Mi File Expolrer/Manager
+com.mi.android.globalFileexplorer
+		   
+# "Home Layout - It most likely handles the main screen layout (grid size, apps placement...)
+# Some people removed this without issue."
+com.mi.globallayout
+		   
+# "UniPlay Service - MIUI screen casting service.
+# If removed, you'll have to use Android's native casting services which can be accessed through a 3rd party app."
+com.milink.service 
+		   
+		   
+		   
 # UNKOWN - but might not be risky
-
-com.miui.systemui.devices.overlay # https://github.com/BurnerMedia/GuardDB/blob/master/com.miui.systemui.devices.overlay
-				  # https://gist.github.com/Biswa96/81fe477079fa5279f7cfd7b98d5519c7
-com.miui.face.overlay.miui # https://github.com/BurnerMedia/GuardDB/blob/master/com.miui.face.overlay.miui
-com.miui.rom # https://gist.github.com/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a
-             # https://gist.github.com/Biswa96/81fe477079fa5279f7cfd7b98d5519c7
-com.android.provision.overlay.miui # https://gist.github.com/mcxiaoke/ade05718f590bcd574b807c4706a00b1
-com.miui.systemui.overlay.devices.android # https://github.com/BurnerMedia/GuardDB/blob/master/com.miui.face.overlay.miui
-					  # https://gist.github.com/mcxiaoke/ade05718f590bcd574b807c4706a00b1
-com.google.android.cellbroadcastreceiver.overlay.miui # https://gist.github.com/mcxiaoke/ade05718f590bcd574b807c4706a00b1
-						      # whatever this means lol - https://youtu.be/L8Y0jLg3RfE
-						      # there's prolly a stock android app for it present, mi loves to slap its sticker on stuff
-com.xiaomi.bttester # https://github.com/paritosh9199/xiomi-redimi-debloat/blob/master/package_list.txt
-com.android.wifi.resources.xiaomi # couldn't find what this is, but i removed it
-				  # wifi and hotspot work just fine
-com.android.networkstack.inprocess.overlay # https://www.apkmirror.com/apk/xiaomi-inc/networkstack-4/networkstack-4-10-release/networkstack-10-3-android-apk-download/
-					   # xiaomi's overlay for com.android.networkstack.inprocess
-					   # don't diable networkstack itself tho, that's important - https://source.android.com/docs/core/architecture/modular-system/networking
-					   # i disabled this xiaomi overlay and things seem to be normal so far
-
-
-
-
-
-
+		   
+# https://github.com/BurnerMedia/GuardDB/blob/master/com.miui.systemui.devices.overlay
+# https://gist.github.com/Biswa96/81fe477079fa5279f7cfd7b98d5519c7
+com.miui.systemui.devices.overlay
+		   
+# https://github.com/BurnerMedia/GuardDB/blob/master/com.miui.face.overlay.miui
+com.miui.face.overlay.miui
+		   
+# https://gist.github.com/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a
+# https://gist.github.com/Biswa96/81fe477079fa5279f7cfd7b98d5519c7
+com.miui.rom 
+		   
+# https://gist.github.com/mcxiaoke/ade05718f590bcd574b807c4706a00b1
+com.android.provision.overlay.miui
+		   
+# https://github.com/BurnerMedia/GuardDB/blob/master/com.miui.face.overlay.miui
+# https://gist.github.com/mcxiaoke/ade05718f590bcd574b807c4706a00b1
+com.miui.systemui.overlay.devices.android 
+		   
+# https://gist.github.com/mcxiaoke/ade05718f590bcd574b807c4706a00b1
+# whatever this means lol - https://youtu.be/L8Y0jLg3RfE
+# there's prolly a stock android app for it present, mi loves to slap its sticker on stuff
+com.google.android.cellbroadcastreceiver.overlay.miui 
+		   
+		   
+# https://github.com/paritosh9199/xiomi-redimi-debloat/blob/master/package_list.txt
+com.xiaomi.bttester
+		   
+# couldn't find what this is, but i removed it
+# wifi and hotspot work just fine
+com.android.wifi.resources.xiaomi
+		   
+# https://www.apkmirror.com/apk/xiaomi-inc/networkstack-4/networkstack-4-10-release/networkstack-10-3-android-apk-download/
+# xiaomi's overlay for com.android.networkstack.inprocess
+# don't diable networkstack itself tho, that's important
+# https://source.android.com/docs/core/architecture/modular-system/networking
+# i disabled this xiaomi overlay and things seem to be normal so far
+com.android.networkstack.inprocess.overlay
+		   
+		   
+		   
 # CAUTION - might lose functionality - i removed all these and things seem to be alright
-
-com.miui.cleaner # https://github.com/0x192/universal-android-debloater/issues/238
-com.xiaomi.powerchecker # https://lucacesarano.medium.com/xiaomi-super-bloatware-list-2020-db38ace9e9e1
-			# "Power Detector \nSecurity> Battery> Activity Control. \nDetects abnormal power usage by apps (not all. Some Xiaomi apps are whitelisted)\nNeeded for 'com.miui.powerkeeper' to work.\n",
-com.mi.globallayout # "Home Layout\nIt most likely handles the main screen layout (grid size, apps placement...)\n#\nSome people removed this without issue.\n"
+		   
+# https://github.com/0x192/universal-android-debloater/issues/238
+com.miui.cleaner
+		   
+# https://lucacesarano.medium.com/xiaomi-super-bloatware-list-2020-db38ace9e9e1
+# "Power Detector \nSecurity> Battery> Activity Control.
+# Detects abnormal power usage by apps (not all. Some Xiaomi apps are whitelisted)
+# Needed for 'com.miui.powerkeeper' to work.\n",
+com.xiaomi.powerchecker
+		   
