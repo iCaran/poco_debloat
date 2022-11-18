@@ -19,9 +19,11 @@ com.mediatek.callrecorder
 com.mediatek.engineermode
 		   
 # "omacp = OMA Client Provisioning. A protocol specified by the Open Mobile Alliance (OMA).
-# Configuration messages parser. Used for provisioning APN settings to devices via SMS.\nIn my case,
-# it was automatic and I never needed configuration messages.\nMaybe it's useful if carriers change their APN.
-# But you can still change the config manually, it's not difficult.\nDunno why Mediatek handles this kind of things.
+# Configuration messages parser. Used for provisioning APN settings to devices via SMS.
+# In my case, it was automatic and I never needed configuration messages.
+# Maybe it's useful if carriers change their APN.
+# But you can still change the config manually, it's not difficult.
+# Dunno why Mediatek handles this kind of things.
 # Safe to remove. At worst, you'll need to manually config your APN.
 # OMACP can be abused: https://research.checkpoint.com/2019/advanced-sms-phishing-attacks-against-modern-android-based-smartphones/
 # https://www.zdnet.com/article/samsung-huawei-lg-and-sony-phones-vulnerable-to-rogue-provisioning-messages/",
@@ -31,7 +33,8 @@ com.mediatek.omacp
 # https://www.olorin.me/2020/02/11/debloating-the-umidigi-f2/
 com.mediatek.capctrl.service
 		   
-# GPS testing and debugging, accessed via Engineer Mode. Doesn’t stop GPS from working by removing – and you will explicitly know if you need these.
+# GPS testing and debugging, accessed via Engineer Mode. 
+# Doesn’t stop GPS from working by removing – and you will explicitly know if you need these.
 com.mediatek.lbs.em2.ui
 		   
 		   
