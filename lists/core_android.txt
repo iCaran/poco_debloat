@@ -1,70 +1,218 @@
-com.android.dynsystem # "Dynamic System Updates\nRuns on boot, but doesn't seem to run in the background beyond that.\nTreble gives the ability to boot an AOSP Generic System Image (GSI) on any supported device.\nDynamic System Updates allows to boot into a Generic System Image (GSI) without interfering with the current installation.\nThat means the bootloader doesn’t need to be unlocked and the user data doesn’t need to be wiped.\nhttps://developer.android.com/topic/dsu"
-com.android.providers.settings # SettingsStorage
-com.android.providers.telephony # Phone and MessagingStorage
-com.android.providers.media # "Provider of media files (images, videos and such).\nScans the device for media files and allows permitted apps access to them.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html",
-com.android.networkstack.tethering.overlay # https://www.reddit.com/r/LineageOS/comments/wuxfi3/comgoogleandroidnetworkstacktetheringoverlay_is/ildjf82/
-com.android.networkstack.tethering.inprocess.overlay # something related to the above i suppose
-com.android.externalstorage # "Needed by apps to access external storage (like memory cards)."
-com.android.htmlviewer # "Allows apps to load URLs into the WebView, which allows web content to be displayed directly in the app..\nWARNING: Removing this causes a bootloop on some MIUI 12.5.4+ phones."
-com.android.providers.downloads # "Downloads Manager\nProvider for downloaded files.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html",
-com.android.pacprocessor # this explanation is better than i can give - https://forum.xda-developers.com/t/what-is-pacprocessor-apk.2597742/post-74804446
-			 # apparantly removing this causes bootloop - https://forum.xda-developers.com/t/what-is-pacprocessor-apk.2597742/post-64802000
-com.android.certinstaller # "Certificate installer\nUsed for accepting and revoking Internet certificates.\nCertificates identify ownership of public keys, for use in secure communications.\nBreaks Wi-Fi if disabled.",
-com.android.mtp # "MTP Host\nHandles MTP(Media Transfer Protocol), a protocol for transfering files between the device and a connected PC."
-com.android.backupconfirm # "Restores Google settings with Google Backup restore.\nDisplays confirmation popup when doing ADB backup. Disabling this package breaks ADB Backup."
-com.android.provision # "Provisioning is the process of setting up a network connection that will allow new users. \nThis service is for exemple needed when the user's phone moves from one cell-tower to another.\n",
-com.android.statementservice # "Intent Filter Verification Service\nIntent: https://developer.android.com/reference/android/content/Intent\nIntent Filters: https://developer.android.com/guide/components/intents-filters\nhttps://android.stackexchange.com/questions/191163/what-does-the-intent-filter-verification-service-app-from-google-do",
-com.android.settings.intelligence # "Settings Suggestions\nHandles the search and suggestions features in the settings app.\nDisabling this package makes the Settings app crash when you tap on search.\nDoesn't run in the background, so there's little benefit in disabling.\nhttps://gitlab.com/W1nst0n/universal-android-debloater/-/issues/51",
-com.android.providers.settings # "Provider for settings app data.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html",
-com.android.sharedstoragebackup # "Used during backup. Backs up the shared storage? (files accessible by every app with STORAGE permission)\nThings have changed with Android 10. Don't know if this package is still relevant for new phones.\nhttps://blog.mindorks.com/understanding-the-scoped-storage-in-android.",
-				# seems like android 11 only increased this functionality - https://developer.android.com/training/data-storage/shared
-				# might not be safe to remove, with each passing day i suppose many apps would be using this
-				# longer description - https://howtofixapp.com/com-android-sharedstoragebackup/
-com.android.server.telecom # "Manages calls via your network provider or SIM and controls the phone modem?"
-com.android.wifi.resources # used for wifi functionality, mentioned here - https://source.android.com/docs/core/architecture/modular-system/wifi
-			   # lol interesting - https://discussions.soti.net/thread/wi-fi-malware-issue-android-11
-com.android.localtransport # "Backup transport for stashing stuff into a known location on disk, and later restoring from there.\nNeeded for storing backup data locally on a device?\nThis package also provides the backup confirmation UI.\nhttps://developer.android.com/guide/topics/data/testingbackup",
-com.android.settings # android settings app
-com.android.phone # AOSP dialer, this isn't google dialer, you need this for calls to work
-com.android.shell # "Shell\nUnix shell that receives ADB commands sent from a PC.\nThis is what UAD uses to execute commands on Android devices. Proobably a bad idea to disable ;)"
-com.android.systemui # "Everything you see in Android that's not an app. User interface of Android\n"
-com.android.providers.contacts # "Contacts Storage\nProvider for contact data.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html\nBreaks contact functionality if disabled. Not recommended to disable if you plan to use your device as a phone.",
-com.android.keychain # "Enable apps to use system wide credential KeyChain (shared credentials between apps)\nhttps://security.stackexchange.com/questions/216716/android-keychain-what-is-a-system-wide-credential\n"
-		     # even setting a device password require keychain, from what i've heard, disabling this might make the system crash
-
-
-
-
-
+# "Dynamic System Updates\nRuns on boot, but doesn't seem to run in the background beyond that.
+# Treble gives the ability to boot an AOSP Generic System Image (GSI) on any supported device.
+# Dynamic System Updates allows to boot into a Generic System Image (GSI)
+# without interfering with the current installation.
+# That means the bootloader doesn’t need to be unlocked and the user data doesn’t need to be wiped.
+# https://developer.android.com/topic/dsu"
+com.android.dynsystem
+		   
+# SettingsStorage
+com.android.providers.settings
+		   
+# Phone and MessagingStorage
+com.android.providers.telephony
+		   
+# "Provider of media files (images, videos and such).
+# Scans the device for media files and allows permitted apps access to them.
+# Content providers encapsulate data, providing centralized management of data shared between apps.
+# https://developer.android.com/guide/topics/providers/content-providers.html",
+com.android.providers.media
+		   
+# https://www.reddit.com/r/LineageOS/comments/wuxfi3/comgoogleandroidnetworkstacktetheringoverlay_is/ildjf82/
+com.android.networkstack.tethering.overlay
+		   
+# something related to the above i suppose
+com.android.networkstack.tethering.inprocess.overlay
+		   
+# "Needed by apps to access external storage (like memory cards)."
+com.android.externalstorage
+		   
+# "Allows apps to load URLs into the WebView, which allows web content to be displayed directly in the app..
+# WARNING: Removing this causes a bootloop on some MIUI 12.5.4+ phones."
+com.android.htmlviewer
+		   
+# "Downloads Manager. Provider for downloaded files.
+# Content providers encapsulate data, providing centralized management of data shared between apps.
+# https://developer.android.com/guide/topics/providers/content-providers.html",
+com.android.providers.downloads
+		   
+# this explanation is better than i can give - 
+# https://forum.xda-developers.com/t/what-is-pacprocessor-apk.2597742/post-74804446
+# apparantly removing this causes bootloop - 
+# https://forum.xda-developers.com/t/what-is-pacprocessor-apk.2597742/post-64802000
+com.android.pacprocessor
+		   
+# "Certificate installer. Used for accepting and revoking Internet certificates.
+# Certificates identify ownership of public keys, for use in secure communications.
+# Breaks Wi-Fi if disabled.",
+com.android.certinstaller
+		   
+# "MTP Host\nHandles MTP(Media Transfer Protocol), 
+# a protocol for transfering files between the device and a connected PC."
+com.android.mtp
+		   
+# "Restores Google settings with Google Backup restore.
+# Displays confirmation popup when doing ADB backup.
+# Disabling this package breaks ADB Backup."
+com.android.backupconfirm
+		   
+# "Provisioning is the process of setting up a network connection that will allow new users.
+# This service is for exemple needed when the user's phone moves from one cell-tower to another.",
+com.android.provision
+		   
+# "Intent Filter Verification Service
+# Intent: https://developer.android.com/reference/android/content/Intent
+# Intent Filters: https://developer.android.com/guide/components/intents-filters
+# https://android.stackexchange.com/questions/191163/what-does-the-intent-filter-verification-service-app-from-google-do",
+com.android.statementservice
+		   
+# "Settings Suggestions. Handles the search and suggestions features in the settings app.
+# Disabling this package makes the Settings app crash when you tap on search.
+# Doesn't run in the background, so there's little benefit in disabling.
+# https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/51",
+com.android.settings.intelligence
+		   
+# "Provider for settings app data.
+# Content providers encapsulate data, providing centralized management of data shared between apps.
+# https://developer.android.com/guide/topics/providers/content-providers.html",
+com.android.providers.settings
+		   
+# "Used during backup. Backs up the shared storage? (files accessible by every app with STORAGE permission)
+# Things have changed with Android 10. Don't know if this package is still relevant for new phones.
+# https://blog.mindorks.com/understanding-the-scoped-storage-in-android.",
+# seems like android 11 only increased this functionality - 
+# https://developer.android.com/training/data-storage/shared
+# might not be safe to remove, with each passing day i suppose many apps would be using this
+# longer description - https://howtofixapp.com/com-android-sharedstoragebackup/
+com.android.sharedstoragebackup
+		   
+# "Manages calls via your network provider or SIM and controls the phone modem?"
+com.android.server.telecom
+		   
+# used for wifi functionality, mentioned here - 
+# https://source.android.com/docs/core/architecture/modular-system/wifi
+# lol interesting - https://discussions.soti.net/thread/wi-fi-malware-issue-android-11
+com.android.wifi.resources
+		   
+# "Backup transport for stashing stuff into a known location on disk, and later restoring from there.
+# Needed for storing backup data locally on a device?\nThis package also provides the backup confirmation UI.
+# https://developer.android.com/guide/topics/data/testingbackup",
+com.android.localtransport
+		   
+# android settings app
+com.android.settings
+		   
+# AOSP dialer, this isn't google dialer, you need this for calls to work
+com.android.phone
+		   
+# "Shell. Unix shell that receives ADB commands sent from a PC.
+# This is what UAD uses to execute commands on Android devices. 
+# Proobably a bad idea to disable ;)"
+com.android.shell
+		   
+# "Everything you see in Android that's not an app. User interface of Android\n"
+com.android.systemui
+		   
+# "Contacts Storage.Provider for contact data.
+# Content providers encapsulate data, providing centralized management of data shared between apps.
+# https://developer.android.com/guide/topics/providers/content-providers.html
+# Breaks contact functionality if disabled. 
+# Not recommended to disable if you plan to use your device as a phone.",
+com.android.providers.contacts
+		   
+# "Enable apps to use system wide credential KeyChain (shared credentials between apps)
+# https://security.stackexchange.com/questions/216716/android-keychain-what-is-a-system-wide-credential"
+# even setting a device password require keychain, from what i've heard, disabling this might make the system crash
+com.android.keychain
+		   
+		   
+		   
 # these ones are less black or white and more grey
-
-com.android.carrierconfig # "Dynamically provides configuration for the carrier network.\nThe config contains: Roaming networks, Voicemail settings, SMS/MMS settings, VoLTE/IMS settings, and more.\nIf a carrier app is installed it will be queried for overrides to these settings.\nSeems to run on boot and when you swap SIM?\nhttps://source.android.com/devices/tech/config/carrier\nhttps://cs.android.com/android/platform/superproject/+/master:packages/apps/CarrierConfig/src/com/android/carrierconfig/DefaultCarrierConfigService.java",
-			  # maybe it's not needed for a carrier locked phone, but seems to me a requirement for the rest
-com.android.internal.systemui.navbar.threebutton # "The default system navbar? It's what you use when you don't use gesture navigation."
-						 # i personally, and i think most people as well, just like the original navigation instead of the gesture iphone-copy
-						 # but if you really want to use gesture, you can remove this one i think
-com.android.stk # "SIM toolkit\nSpecial package for dual-sim devices?\nEnables carriers to initiate \"value-added services\". Basically, some operators provide SIM-cards with applications installed on them.\nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas been abused:\n- SimJacker: https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack: https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\nWARNING: do mind that disabling/uninstalling this package will break mobile identity management which could be used by apps (for example your Bank) to authenticate you. See https://en.wikipedia.org/wiki/Mobile_identity_management",
-		# ive needed this once to deactive carrier spam services, turn on DND
-		# after such use, i recommend to disable
-com.android.proxyhandler # "Handles proxy config.\nSafe to remove if you don't use a proxy."
-com.android.managedprovisioning # "Work Setup/Work profile setup\nManages Android user account profiles.\nThe typical use-case is setting up a corporate profile that is controlled by the employer on an employee's personal device, to keep personal and work data separate.\nhttps://support.google.com/work/android/answer/6191949?\nhttps://developers.google.com/android/work/requirements/work-profile\nNeeded for sandbox's apps like Shelter/Island.",
- 				# apps like shelter are handy at times, the whole seperate profile thing can be useful
-				# but honestly you might never need it so can remove
-com.android.vpndialogs # "Provide VPN support to Android\nhttps://en.wikipedia.org/wiki/Dialog_(software)\nSafe to remove if you don't plan to use a VPN.\n"
-com.android.providers.blockednumber # "Handles blocked number storage.\nOn some devices this seems to be tied to the recent apps menu (see https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/6)\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html",
-				    # again one might simply not need this, calls and stuff work just fine without it, but it's likely you might need to block someone or other
-com.android.providers.userdictionary # "Handles user dictionary for keyboard apps.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html. WARNING: Removing this package may cause settings menu to crash on some Huawei phones",
-				     # if you're paranoid enough like me, this is a privacy concern, no app should know what my vocabulary is
-com.android.location.fused # "Manages underlying location technologies, such as GPS and Wi-Fi."
-			   # if you use neither of those, this would be a massive privacy boost
-com.android.bluetooth # bluetooth service, enable or diable depending upon if you use it i suppose
-
-
-
-
+		   
+		   
+# "Dynamically provides configuration for the carrier network.
+# The config contains: Roaming networks, Voicemail settings, SMS/MMS settings, VoLTE/IMS settings, and more.
+# If a carrier app is installed it will be queried for overrides to these settings.
+# Seems to run on boot and when you swap SIM
+# https://source.android.com/devices/tech/config/carrier
+# https://cs.android.com/android/platform/superproject/+/master:packages/apps/CarrierConfig/src/com/android/carrierconfig/DefaultCarrierConfigService.java",
+# maybe it's not needed for a carrier locked phone, but seems to me a requirement for the rest
+com.android.carrierconfig
+		   
+# "The default system navbar? It's what you use when you don't use gesture navigation."
+# i personally, and i think most people as well, just like the original navigation instead of the gesture iphone-copy
+# but if you really want to use gesture, you can remove this one i think
+com.android.internal.systemui.navbar.threebutton
+		   
+# "SIM toolkit. Special package for dual-sim devices?
+# Enables carriers to initiate \"value-added services\". 
+# Basically, some operators provide SIM-cards with applications installed on them.
+# https://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1
+# Has been abused: - 
+# SimJacker: https://thehackernews.com/2019/09/simjacker-mobile-hacking.html
+# WIBattack: https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/
+# WARNING: do mind that disabling/uninstalling this package will break mobile identity management 
+# which could be used by apps (for example your Bank) to authenticate you. 
+# See https://en.wikipedia.org/wiki/Mobile_identity_management",
+# ive needed this once to deactive carrier spam services, turn on DND
+# after such use, i recommend to disable
+com.android.stk
+		   
+# "Handles proxy config.\nSafe to remove if you don't use a proxy."
+com.android.proxyhandler
+		   
+# "Work Setup/Work profile setup. Manages Android user account profiles.
+# The typical use-case is setting up a corporate profile that is controlled by the employer on an employee's personal device, 
+# to keep personal and work data separate.
+# https://support.google.com/work/android/answer/6191949?
+# https://developers.google.com/android/work/requirements/work-profile
+# Needed for sandbox's apps like Shelter/Island.",
+# apps like shelter are handy at times, the whole seperate profile thing can be useful
+# but honestly you might never need it so can remove
+com.android.managedprovisioning
+		   
+# "Provide VPN support to Android\nhttps://en.wikipedia.org/wiki/Dialog_(software)
+# Safe to remove if you don't plan to use a VPN."
+com.android.vpndialogs
+		   
+# "Handles blocked number storage.On some devices this seems to be tied to the recent apps menu 
+# (see https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/6)
+# Content providers encapsulate data, providing centralized management of data shared between apps.
+# https://developer.android.com/guide/topics/providers/content-providers.html",
+# again one might simply not need this, calls and stuff work just fine without it,
+# but it's likely you might need to block someone or other
+com.android.providers.blockednumber
+		   
+# "Handles user dictionary for keyboard apps.
+# Content providers encapsulate data, providing centralized management of data shared between apps.
+# https://developer.android.com/guide/topics/providers/content-providers.html. 
+# WARNING: Removing this package may cause settings menu to crash on some Huawei phones",
+# if you're paranoid enough like me, this is a privacy concern, no app should know what my vocabulary is
+com.android.providers.userdictionary
+		   
+# "Manages underlying location technologies, such as GPS and Wi-Fi."
+# if you use neither of those, this would be a massive privacy boost
+com.android.location.fused
+		   
+# bluetooth service, enable or diable depending upon if you use it i suppose
+com.android.bluetooth
+		   
+		   
+		   
 # im not sure about these
-
-com.android.ons # "Opportunistic Network Service\nFrom what I can glean in the source code it seems like this provides a list of available networks and assigns each network a priority.\nI've never seen it run on its own, so this might be part of some automatic network switching setting that I have turned off.\nhttps://cs.android.com/android/platform/superproject/+/master:packages/services/AlternativeNetworkAccess/src/com/android/ons/OpportunisticNetworkService.java\nhttps://developer.android.com/reference/android/telephony/AvailableNetworkInfo\nhttps://cs.android.com/android/platform/superproject/+/master:frameworks/base/telephony/java/android/telephony/AvailableNetworkInfo.java",
-com.android.hotspot2.osulogin # OsuLogin is a component interface for the mobile hotspot. It is basically in charge to control the mobile tethering of your smartphone.
-			      # a system app on Android phones that connects you to WiFi Hotspot 2.0 networks through an OSU, or Online Sign Up, user interface
-			      # https://fixyourandroid.com/about/osulogin/	
+		   
+		   
+# "Opportunistic Network Service
+# From what I can glean in the source code it seems like this provides a list of available networks 
+# and assigns each network a priority.
+# I've never seen it run on its own, so this might be part of some automatic network switching setting that I have turned off.
+# https://cs.android.com/android/platform/superproject/+/master:packages/services/AlternativeNetworkAccess/src/com/android/ons/OpportunisticNetworkService.java
+# https://developer.android.com/reference/android/telephony/AvailableNetworkInfo
+# https://cs.android.com/android/platform/superproject/+/master:frameworks/base/telephony/java/android/telephony/AvailableNetworkInfo.java",
+com.android.ons
+		   
+# OsuLogin is a component interface for the mobile hotspot. 
+# It is basically in charge to control the mobile tethering of your smartphone.
+# a system app on Android phones that connects you to WiFi Hotspot 2.0 networks through an OSU, or Online Sign Up, user interface
+# https://fixyourandroid.com/about/osulogin/	
+com.android.hotspot2.osulogin
