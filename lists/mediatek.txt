@@ -1,44 +1,77 @@
 # may disable
-
-com.mediatek.ygps # A small application that shows the location and signal strength of the GPS satellites. 
-		  # this is actually by xiaomi - https://www.apkmirror.com/apk/xiaomi-inc/ygps-3/ygps-3-1-1-release/ygps-1-1-3-android-apk-download/
-		  # might want to disable for better battery life - https://android.stackexchange.com/a/68910
-		  # https://www.hybrid-analysis.com/sample/1df95142b0838c4d32daa1d7e43f22dc1f3f7b43f2f3fe9aab89e8310c70d691/5cf3b8c7028838aa5a37db5a
-com.mediatek.callrecorder # "This is not the kind of feature expected from a Soc company.\nIf you remove this I guess you will not be able to record your calls from the stock dialer\nCan someone share the apk and verify this?\n",
-			  # this is also actually Xiaomi - https://www.apkmirror.com/apk/xiaomi-inc/call-recorder-8/call-recorder-8-11-release/call-recorder-11-android-apk-download/
-			  # doesn't affect normal calling fucntions
-
-com.mediatek.engineermode # "Enigneer mode you can access by dialing a secret code (*#*#3646633#*#* on some Xiaomi phones for instance)\nIt enables you to access to debug/logged data and some hidden firmware settings. \n",
-com.mediatek.omacp # "omacp = OMA Client Provisioning. A protocol specified by the Open Mobile Alliance (OMA).\nConfiguration messages parser. Used for provisioning APN settings to devices via SMS.\nIn my case, it was automatic and I never needed configuration messages.\nMaybe it's useful if carriers change their APN. But you can still change the config manually, it's not difficult.\nDunno why Mediatek handles this kind of things. Safe to remove. At worst, you'll need to manually config your APN.\nOMACP can be abused:\nhttps://research.checkpoint.com/2019/advanced-sms-phishing-attacks-against-modern-android-based-smartphones/\nhttps://www.zdnet.com/article/samsung-huawei-lg-and-sony-phones-vulnerable-to-rogue-provisioning-messages/",
-com.mediatek.capctrl.service # These are used for corporate deployment/controlling of devices.
-			     # https://www.olorin.me/2020/02/11/debloating-the-umidigi-f2/
-com.mediatek.lbs.em2.ui # GPS testing and debugging, accessed via Engineer Mode. Doesn’t stop GPS from working by removing – and you will explicitly know if you need these.
-
-
-
-
-
+		   
+		   
+		   
+# A small application that shows the location and signal strength of the GPS satellites.
+# this is actually by xiaomi - https://www.apkmirror.com/apk/xiaomi-inc/ygps-3/ygps-3-1-1-release/ygps-1-1-3-android-apk-download/
+# might want to disable for better battery life - https://android.stackexchange.com/a/68910
+# https://www.hybrid-analysis.com/sample/1df95142b0838c4d32daa1d7e43f22dc1f3f7b43f2f3fe9aab89e8310c70d691/5cf3b8c7028838aa5a37db5a
+com.mediatek.ygps
+		   
+# "This is not the kind of feature expected from a Soc company.
+# If you remove this I guess you will not be able to record your calls from the stock dialer",
+# this is also actually Xiaomi - https://www.apkmirror.com/apk/xiaomi-inc/call-recorder-8/call-recorder-8-11-release/call-recorder-11-android-apk-download/
+# doesn't affect normal calling fucntions
+com.mediatek.callrecorder
+		   
+# "Enigneer mode you can access by dialing a secret code (*#*#3646633#*#* on some Xiaomi phones for instance)
+# It enables you to access to debug/logged data and some hidden firmware settings. \n",
+com.mediatek.engineermode
+		   
+# "omacp = OMA Client Provisioning. A protocol specified by the Open Mobile Alliance (OMA).
+# Configuration messages parser. Used for provisioning APN settings to devices via SMS.\nIn my case,
+# it was automatic and I never needed configuration messages.\nMaybe it's useful if carriers change their APN.
+# But you can still change the config manually, it's not difficult.\nDunno why Mediatek handles this kind of things.
+# Safe to remove. At worst, you'll need to manually config your APN.
+# OMACP can be abused: https://research.checkpoint.com/2019/advanced-sms-phishing-attacks-against-modern-android-based-smartphones/
+# https://www.zdnet.com/article/samsung-huawei-lg-and-sony-phones-vulnerable-to-rogue-provisioning-messages/",
+com.mediatek.omacp
+		   
+# These are used for corporate deployment/controlling of devices.
+# https://www.olorin.me/2020/02/11/debloating-the-umidigi-f2/
+com.mediatek.capctrl.service
+		   
+# GPS testing and debugging, accessed via Engineer Mode. Doesn’t stop GPS from working by removing – and you will explicitly know if you need these.
+com.mediatek.lbs.em2.ui
+		   
+		   
+		   
 # core
-
-com.mediatek.ims # "Mediatek's implementation of IMS (low-level implementation?)\nhttps://www.programmersought.com/article/50164530665/\nIMS(Ip Multimedia Subsystem) is an open industry standard for voice and multimedia communications over packet-based IP networks (VoLTE/VoIP/Wifi calling).",
-com.mediatek.telephony # "This has a class called SmsManagerEx which manages SMS operations such as sending data, text, and PDU SMS messages."
-		       # https://forum.xda-developers.com/t/com-android-phone-crashes-anyone-have-source-code-for-mediatek-telephony-apk.3953296/
-com.mediatek.location.lppe.main # "LPPE = LTE Positioning Protocol enhancements/extensions (LTE = \"4G\")\nPositioning and assistance protocol between E-SMLC (mobile location center) and UE (User Equipement = phone)\nhttps://www.gpsworld.com/wirelessexpert-advice-positioning-protocol-next-gen-cell-phones-11125/\nI don't know the app has the permission to read SMS\n",
-com.mediatek # Its the set of APIs in the Mediatek platforms. These APIs will be having a set of classes which provides the interface between the applications and the system libraries to perform a specific operation.
-	     # https://www.quora.com/What-is-com-mediatek
-
-
-
-
-
-
-
-
+		   
+		   
+# "Mediatek's implementation of IMS (low-level implementation?)
+# https://www.programmersought.com/article/50164530665/
+# IMS(Ip Multimedia Subsystem) is an open industry standard for voice and multimedia communications over packet-based IP networks 
+# (VoLTE/VoIP/Wifi calling).",
+com.mediatek.ims
+		   
+# "This has a class called SmsManagerEx which manages SMS operations such as sending data, text, and PDU SMS messages."
+# https://forum.xda-developers.com/t/com-android-phone-crashes-anyone-have-source-code-for-mediatek-telephony-apk.3953296/
+com.mediatek.telephony
+		   
+# "LPPE = LTE Positioning Protocol enhancements/extensions (LTE = \"4G\")
+# Positioning and assistance protocol between E-SMLC (mobile location center) and UE (User Equipement = phone)
+# https://www.gpsworld.com/wirelessexpert-advice-positioning-protocol-next-gen-cell-phones-11125/
+# I don't know the app has the permission to read SMS\n",
+com.mediatek.location.lppe.main
+		   
+# Its the set of APIs in the Mediatek platforms. 
+# These APIs will be having a set of classes which provides the interface between the applications and the system libraries to perform a specific operation.
+# https://www.quora.com/What-is-com-mediatek
+com.mediatek
+		   
+		   
+		   
 # unknown
-
+		   
+		   
 com.mediatek.SettingsProviderResOverlay
-com.mediatek.systemuiresoverlay # mentions: 
-				# https://eu.community.samsung.com/t5/mobil-alkalmaz%C3%A1sok-%C3%A9s/debloat/td-p/6177760
-				# https://gist.github.com/ys3669/6c4c13b0ad3829ea8b5199d854921c46
-				# https://github.com/akavkl/Samsung-OneUI-Debloat/blob/main/Debloat.txt
-com.mediatek.frameworkresoverlay # https://chomikuj.pl/kamil19116/UPDATE+v+0.13+!+22.05.2022+Gry+i+Aplikacje+Android/com.mediatek.frameworkresoverlay,8172124698.apk%28executable%29
+		   
+# mentions:
+# https://eu.community.samsung.com/t5/mobil-alkalmaz%C3%A1sok-%C3%A9s/debloat/td-p/6177760
+# https://gist.github.com/ys3669/6c4c13b0ad3829ea8b5199d854921c46
+# https://github.com/akavkl/Samsung-OneUI-Debloat/blob/main/Debloat.txt
+com.mediatek.systemuiresoverlay
+		   
+# https://chomikuj.pl/kamil19116/UPDATE+v+0.13+!+22.05.2022+Gry+i+Aplikacje+Android/com.mediatek.frameworkresoverlay,8172124698.apk%28executable%29
+com.mediatek.frameworkresoverlay
