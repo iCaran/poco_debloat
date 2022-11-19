@@ -1,39 +1,110 @@
-com.google.android.webview # "\nAllows Android apps to display content from the web directly inside the app. It's based on Chrome.\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view"
-			   # only one in this list which can be removed, but only after you've installed bromite webview
-			
-
-
-
-com.google.android.ext.services # core OS functionality such as notification ranking, autofill text-matching strategies, storage cache, package watchdog, and other services that run continually
-com.google.android.networkstack.tethering.overlay # https://www.reddit.com/r/LineageOS/comments/wuxfi3/comgoogleandroidnetworkstacktetheringoverlay_is/
-com.google.android.configupdater # ConfigUpdater Performs the configuration of the application (any) when installing it. Such as installing a certificate and configuring a firewall
-				 # ConfigUpdater\nOccasionally runs in the background.\nAuto updates certificates for TLS connection, firewall configuration, e.t.c.\nMainly used for Google services? Might be fine to disable if you don't use Google services. Disabling might mess with security if you do use them though.\nhttps://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/os/ConfigUpdate.java"
-
-
-
-com.google.android.providers.media.module # "Media Storage\nIn Android 11 this is literally what provides access to files.\nSafe to disable, but NOT recommended; breaks file browsers and other forms of file access.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html"
-					  # i tried disabling this and even the file explorers stopped working, don't disable
-com.google.android.overlay.modules.permissioncontroller # "Permission controller Theme pack\nGuessing it's a pack of themes for the Permission Controller based on the name."
-com.google.android.permissioncontroller # "Permission controller\nControls app permissions.\nhttps://source.android.com/devices/architecture/modular-system/permissioncontroller"
-com.google.android.setupwizard # "Android Setup\nThe new/factory reset device basic configuration setup guides you through the basics of setting up your device.\nWARNING: Oddly enough, disabling/uninstalling this package will break mobile identity management which could be used by apps (for example your Bank) to authenticate you. See https://en.wikipedia.org/wiki/Mobile_identity_management"
-			       # although if you're rooted, you're bank app is likely to detect root and refuse to work anyways, happens on my phone for my bank app
-			       # so this one is upto you, i'll leave it be
-com.google.android.captiveportallogin # "Support for captive portal : https://en.wikipedia.org/wiki/Captive_portal\nA captive portal login is a web page where the users have to input their login information or accept the displayed terms of use. \nSome networks (typically public wifi network) use the captive portal login to block access until the user inputs \nsome necessary information\nNOTE : This package is a now a mandatory mainline module (https://www.xda-developers.com/android-project-mainline-modules-explanation/)\n"
-				      # basically if you want to use a public wifi, you need this
-com.google.android.modulemetadata # "Module that contains metadata about the list of modules on the device. And that’s about it.\nI wouldn't advise you to mess with it as it could break important modules (see #37)\nGood explanation of what android modules are : https://www.xda-developers.com/android-project-mainline-modules-explanation/",
-com.google.android.networkstack # "Network Stack Components\nhttps://source.android.com/devices/architecture/modular-system/networking\nProvides common IP services, network connectivity monitoring, and captive login portal detection.\n",
-com.google.android.networkstack.permissionconfig # "Network Stack Permission Configuration\nDefines a permission that enables modules to perform network-related tasks.\nhttps://source.android.com/devices/architecture/modular-system/networking\n"
-com.google.android.networkstack.overlay # something related to the above
-com.google.android.packageinstaller # "Google package installer. Seems to replace com.android.packageinstaller on newer phones. It is strangely not needed on older devices (you can still install APKs without it by using the AOSP package installer) but since Android 9, it also handles permissions control and could bootloop your device if removed.\nSource: https://source.android.com/docs/core/architecture/modular-system/permissioncontroller.",
-com.google.android.gms # Google Play Services, i think we all know what that is, don't touch on a stock oem rom
-com.google.android.gsf # Google Services Framework, same warning as above
-com.google.android.ims # this is a pretty good description - https://www.reddit.com/r/UniversalProfile/comments/dpwuqg/what_exactly_does_carrier_services_do/f60hesx/
-com.google.android.documentsui # https://source.android.com/docs/core/architecture/modular-system/documentsui
-			       # needed by apps for storage stuff, an installer like aurora also needs this
-com.google.android.overlay.modules.documentsui # the name suggests its just a theme or something for - https://source.android.com/docs/core/architecture/modular-system/documentsui
-					       # the overlay i think can be disabled (i tested, seems fine) but don't disable the documentsui itself
-					       # well that's what i thought, until i disabled it and Aurora Store couldn't install apps anymore, re-enabled and its fine
-com.google.android.connectivity.resources # https://www.apkmirror.com/apk/google-inc/google-connectivity-services/
-					  # apparantly needed for wifi to work normally and "other network connections"		
-com.google.mainline.telemetry # "Contains data on which versions of modules are installed. Google Play uses this data to determine if updates are available for the modules, and to show which security patch is installed.\nThis module doesn’t contain active code and has no functionality on its own.\nhttps://www.xda-developers.com/android-project-mainline-modules-explanation/\nhttps://gitlab.com/W1nst0n/universal-android-debloater/-/issues/27#note_410012436"
-	
+# "Allows Android apps to display content from the web directly inside the app. 
+# It's based on Chrome.
+# Bromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view"
+# only one in this list which can be removed, but only after you've installed bromite webview
+com.google.android.webview
+		   
+		   
+		   
+# core OS functionality such as notification ranking, autofill text-matching strategies, storage cache, package watchdog, and other services that run continually
+com.google.android.ext.services
+		   
+# https://www.reddit.com/r/LineageOS/comments/wuxfi3/comgoogleandroidnetworkstacktetheringoverlay_is/
+com.google.android.networkstack.tethering.overlay
+		   
+# ConfigUpdater Performs the configuration of the application (any) when installing it. 
+# Such as installing a certificate and configuring a firewall
+# ConfigUpdater\nOccasionally runs in the background.
+# Auto updates certificates for TLS connection, firewall configuration, e.t.c.
+# Mainly used for Google services? Might be fine to disable if you don't use Google services. 
+# Disabling might mess with security if you do use them though.
+# https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/os/ConfigUpdate.java"
+com.google.android.configupdater
+		   
+# "Media Storage\nIn Android 11 this is literally what provides access to files.
+# Safe to disable, but NOT recommended; breaks file browsers and other forms of file access.
+# Content providers encapsulate data, providing centralized management of data shared between apps.
+# https://developer.android.com/guide/topics/providers/content-providers.html"
+# i tried disabling this and even the file explorers stopped working, don't disable
+com.google.android.providers.media.module
+		   
+# "Permission controller Theme pack
+# Guessing it's a pack of themes for the Permission Controller based on the name."
+com.google.android.overlay.modules.permissioncontroller
+		   
+# "Permission controller\nControls app permissions.
+# https://source.android.com/devices/architecture/modular-system/permissioncontroller"
+com.google.android.permissioncontroller
+		   
+# "Android Setup
+# The new/factory reset device basic configuration setup guides you through the basics of setting up your device.
+# WARNING: Oddly enough, disabling/uninstalling this package will break mobile identity management which could be used by apps 
+# (for example your Bank) to authenticate you. 
+# See https://en.wikipedia.org/wiki/Mobile_identity_management"
+# although if you're rooted, you're bank app is likely to detect root and refuse to work anyways, happens on my phone for my bank app
+# so this one is upto you, i'll leave it be
+com.google.android.setupwizard
+		   
+# "Support for captive portal : https://en.wikipedia.org/wiki/Captive_portal
+# A captive portal login is a web page where the users have to input their login information or accept the displayed terms of use.
+# Some networks (typically public wifi network) use the captive portal login to block access until the user inputs
+# some necessary information\nNOTE : This package is a now a mandatory mainline module
+# (https://www.xda-developers.com/android-project-mainline-modules-explanation/)"
+# basically if you want to use a public wifi, you need this
+com.google.android.captiveportallogin
+		   
+# "Module that contains metadata about the list of modules on the device.
+# And that’s about it. I wouldn't advise you to mess with it as it could break important modules (see #37)
+# Good explanation of what android modules are : https://www.xda-developers.com/android-project-mainline-modules-explanation/",
+com.google.android.modulemetadata
+		   
+# "Network Stack Components
+# https://source.android.com/devices/architecture/modular-system/networking
+# Provides common IP services, network connectivity monitoring, and captive login portal detection.",
+com.google.android.networkstack
+		   
+# "Network Stack Permission Configuration
+# Defines a permission that enables modules to perform network-related tasks.
+# https://source.android.com/devices/architecture/modular-system/networking"
+com.google.android.networkstack.permissionconfig
+		   
+# something related to the above
+com.google.android.networkstack.overlay
+		   
+# "Google package installer. Seems to replace com.android.packageinstaller on newer phones.
+# It is strangely not needed on older devices
+# (you can still install APKs without it by using the AOSP package installer)
+# but since Android 9, it also handles permissions control and could bootloop your device if removed.
+# Source: https://source.android.com/docs/core/architecture/modular-system/permissioncontroller.",
+com.google.android.packageinstaller
+		   
+# Google Play Services, i think we all know what that is, don't touch on a stock oem rom
+com.google.android.gms
+		   
+# Google Services Framework, same warning as above
+com.google.android.gsf
+		   
+# this is a pretty good description - 
+# https://www.reddit.com/r/UniversalProfile/comments/dpwuqg/what_exactly_does_carrier_services_do/f60hesx/
+com.google.android.ims
+		   
+# https://source.android.com/docs/core/architecture/modular-system/documentsui
+# needed by apps for storage stuff, an installer like aurora also needs this
+com.google.android.documentsui
+		   
+# the name suggests its just a theme or something for - https://source.android.com/docs/core/architecture/modular-system/documentsui
+# the overlay i think can be disabled (i tested, seems fine) but don't disable the documentsui itself
+# well that's what i thought, until i disabled it and Aurora Store couldn't install apps anymore, re-enabled and its fine
+com.google.android.overlay.modules.documentsui
+		   
+# https://www.apkmirror.com/apk/google-inc/google-connectivity-services/
+# apparantly needed for wifi to work normally and "other network connections"
+com.google.android.connectivity.resources
+		   
+# "Contains data on which versions of modules are installed.
+# Google Play uses this data to determine if updates are available for the modules,
+# and to show which security patch is installed.
+# This module doesn’t contain active code and has no functionality on its own.
+# https://www.xda-developers.com/android-project-mainline-modules-explanation/
+# https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/27#note_410012436"
+com.google.mainline.telemetry
