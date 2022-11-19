@@ -63,9 +63,9 @@ https://gist-github-com.translate.goog/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a
 
 --------------
 
+# apparantly causes bootloop
+# https://github.com/0x192/universal-android-debloater/blob/main/resources/assets/uad_lists.json
+com.google.android.ext.services
 
-com.google.android.ext.services # apparantly causes bootloop
-				# https://github.com/0x192/universal-android-debloater/blob/main/resources/assets/uad_lists.json
-
-
-com.android.updater # "Mi Updater\nProvide system updates\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE!\n"
+# "Mi Updater\nProvide system updates\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE!\n"
+com.android.updater
